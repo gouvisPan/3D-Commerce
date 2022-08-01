@@ -1,6 +1,6 @@
 import React from "react";
 import "./Nav.css";
-import { RiHome3Fill } from "react-icons/ri";
+
 import { MdContactPage } from "react-icons/md";
 import { FaCode } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
@@ -15,32 +15,37 @@ const Nav = () => {
       <Link
         to="/"
         onClick={() => setActiveIcon("#")}
-        className={activeIcon === "#" ? "active" : ""}
+        className={activeIcon === "#" ? "active a" : "a"}
+        style={{textDecoration : "none"}}
       >
-        <RiHome3Fill />
+        <MdContactPage />
         <p>Home</p>
       </Link>
 
       <Link
         to="/about"
         onClick={() => setActiveIcon("#about")}
-        className={activeIcon === "#about" ? "active" : ""}
+        className={activeIcon === "#about" ? "active a" : "a"}
+        style={{textDecoration : "none"}}
+      
       >
         <FaUser />
         <p>About</p>
       </Link>
       <Link
-        to="/products"
+        to="/custom"
         onClick={() => setActiveIcon("#projects")}
-        className={activeIcon === "#projects" ? "active" : ""}
+        className={activeIcon === "#projects" ? "active a" : "a"}
+        style={{textDecoration : "none"}}
       >
         <FaCode />
         <p>Products</p>
       </Link>
       <Link
-        to="/"
+        to="/contact"
         onClick={() => setActiveIcon("#contact")}
-        className={activeIcon === "#contact" ? "active" : ""}
+        className={activeIcon === "#contact" ? "active a" : "a"}
+        style={{textDecoration : "none"}}
       >
         <MdContactPage />
         <p>Contact</p>
