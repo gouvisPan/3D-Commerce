@@ -6,7 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background-color: #2c2c2c;
+  background-color: #a5a5a5cb;
   background-image: url("assets/carbonBg.png");
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 
@@ -19,4 +19,12 @@ code {
 
 .page-container{
   margin-top: 5rem;
+}
+
+:root{
+ 
+  --container-width-small: 20vh;
+  --container-width-medium: 40vh;
+  --container-width-large: 60vh;
+  --container-width-xlarge: 80vh;
 }

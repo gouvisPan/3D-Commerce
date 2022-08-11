@@ -21,7 +21,15 @@ const Nav = () => {
         <MdContactPage />
         <p>Home</p>
       </Link>
-
+      <Link
+        to="/custom"
+        onClick={() => setActiveIcon("#projects")}
+        className={activeIcon === "#projects" ? "active a" : "a"}
+        style={{textDecoration : "none"}}
+      >
+        <FaCode />
+        <p>Custom</p>
+      </Link>
       <Link
         to="/about"
         onClick={() => setActiveIcon("#about")}
@@ -31,15 +39,6 @@ const Nav = () => {
       >
         <FaUser />
         <p>About</p>
-      </Link>
-      <Link
-        to="/custom"
-        onClick={() => setActiveIcon("#projects")}
-        className={activeIcon === "#projects" ? "active a" : "a"}
-        style={{textDecoration : "none"}}
-      >
-        <FaCode />
-        <p>Products</p>
       </Link>
       <Link
         to="/contact"

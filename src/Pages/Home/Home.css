@@ -1,0 +1,8 @@
+.menu-container{
+    position: fixed;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;      
+}
