@@ -1,5 +1,6 @@
 import ProductList from "./Products/ProductList";
 import SideMenu from './SideMenu'
+import './Home.css'
 
 
 const Home = (props) => {

@@ -8,8 +8,8 @@
 
   background: linear-gradient(
     90deg,
-    rgba(248, 246, 246, 0) 0%,
-    rgba(31, 31, 31, 0.956) 100%
+    rgba(248, 246, 246, .4) 0%,
+    rgba(0, 0, 0, 1) 100%
   );
   padding-left: 21%;
   gap: 2.5rem;

@@ -1,21 +1,16 @@
-import React from 'react'
-import Grid from '@material-ui/core/Grid';
-import Product from './Product'
+import React from "react";
+import Grid from "@material-ui/core/Grid";
+import Product from "./Product";
+import "./Products.css";
 
-
-
-const ProductList = ({products}) => {
+const ProductList = ({ products }) => {
   return (
-    <div>
-       <Grid container justify="center" spacing={3}>
-        {products.map((product) => (
-          <Grid key={product.id} item xs={12} sm={6} md={4} lg={3}>
-            <Product product={product} />
-          </Grid>
-        ))}
-      </Grid>
+    <div className="productList-container">
+      {products.map((product) => (
+        <Product product={product} />
+      ))}
     </div>
-  )
-}
+  );
+};
 
-export default ProductList
+export default ProductList;

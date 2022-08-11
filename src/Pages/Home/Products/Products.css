@@ -1,0 +1,22 @@
+.productList-container{
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.product-card{
+    box-shadow: 20px 20px 20px 10px rgba(0,0,0,0.1);
+}
+
+.product-card img{
+    width: 350px;
+    height: 230px;
+    object-fit: cover;
+}
+
+.name-price-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-between;
+}
