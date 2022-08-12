@@ -1,0 +1,36 @@
+.menu-container{
+    display: flex;
+    flex-direction: column;
+    border-radius:25px;
+    margin-left: .8rem;
+    padding: 1rem;
+    height: max-content;    
+    max-width: 13%;  
+    background-color: var(--color-primary-dark);
+
+    color: var(--color-grey-light)
+   
+}
+
+.page-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.model-list-item{
+    border-radius: 15px;
+    padding: 0rem .4rem;
+}
+
+.model-list-item p{
+    font-weight: 600;
+    font-size: 18px;
+    padding-left: .6rem;;
+}
+
+
+.model-list-item:hover{
+    cursor: pointer;
+    box-shadow: 6px 6px 15px 5px rgba(0,0,0,0.3);
+    background-color: var(--color-grey);
+}

@@ -1,14 +1,9 @@
-import ProductList from "./Products/ProductList";
-import SideMenu from './SideMenu'
-import './Home.css'
+import React from 'react'
 
+const Home = () => {
+  return (
+    <div>Home</div>
+  )
+}
 
-const Home = (props) => {
-
-  return <div className="page-container">
-    <SideMenu/>
-    <ProductList products={props.products}/>
-  </div>;
-};
-
-export default Home;
+export default Home

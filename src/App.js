@@ -7,6 +7,7 @@ import {React,useState,useEffect} from "react";
 import ErrorPage from "./Pages/ErrorPage";
 import Nav from "./components/Nav";
 import Contact from "./Pages/Contact/Contact";
+import Shop from "./Pages/Shop/Shop";
 import Commerce from "@chec/commerce.js";
 import { commerce } from "./lib/Commerce";
 
@@ -29,7 +30,8 @@ function App() {
     <Router>
       <Nav />
       <Routes>
-        <Route path="/" element={<Home products={products}/>}></Route>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/shop" element={<Shop products={products}/>}></Route>
         <Route path="/custom" element={<Custom />}></Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="/contact" element={<Contact />}></Route>

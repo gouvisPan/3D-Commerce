@@ -1,5 +1,5 @@
 import React from 'react'
-import './Home.css'
+import './Shop.css'
 
 const models = [
   {id: 1, name: "Toyota MR2", parts:[
@@ -29,7 +29,7 @@ const SideMenu = () => {
   return (
     <div className='menu-container'>
       {models.map((model) =>
-      <div>
+      <div className='model-list-item'>
           <p>{model.name}</p>
       </div>)}
     </div>

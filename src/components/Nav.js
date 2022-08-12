@@ -2,8 +2,11 @@ import React from "react";
 import "./Nav.css";
 
 import { MdContactPage } from "react-icons/md";
-import { FaCode } from "react-icons/fa";
+import { MdMail } from "react-icons/md";
 import { FaUser } from "react-icons/fa";
+import { FaPenFancy } from "react-icons/fa";
+import { FaShoppingCart } from "react-icons/fa";
+import { HiHome } from "react-icons/hi";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -18,8 +21,17 @@ const Nav = () => {
         className={activeIcon === "#" ? "active a" : "a"}
         style={{textDecoration : "none"}}
       >
-        <MdContactPage />
+        <HiHome  />
         <p>Home</p>
+      </Link>
+      <Link
+        to="/shop"
+        onClick={() => setActiveIcon("#shop")}
+        className={activeIcon === "#shop" ? "active a" : "a"}
+        style={{textDecoration : "none"}}
+      >
+        <FaShoppingCart />
+        <p>Shop</p>
       </Link>
       <Link
         to="/custom"
@@ -27,7 +39,7 @@ const Nav = () => {
         className={activeIcon === "#projects" ? "active a" : "a"}
         style={{textDecoration : "none"}}
       >
-        <FaCode />
+        <FaPenFancy />
         <p>Custom</p>
       </Link>
       <Link
@@ -46,7 +58,7 @@ const Nav = () => {
         className={activeIcon === "#contact" ? "active a" : "a"}
         style={{textDecoration : "none"}}
       >
-        <MdContactPage />
+        <MdMail />
         <p>Contact</p>
       </Link>
     </nav>

@@ -1,7 +1,7 @@
 import React from "react";
-import { AddShoppingCart } from "@material-ui/icons";
 import useStyles from "./styles";
 import "./Products.css";
+import {FaCartPlus} from 'react-icons/fa'
 
 const Product = ({ product, onAddToCart }) => {
   const classes = useStyles();
@@ -11,7 +11,12 @@ const Product = ({ product, onAddToCart }) => {
       <img src={product.image.url} />
       <div className="name-price-container">
         <span><strong>{product.name}</strong></span>
-        <span>{product.price.formatted_with_code}</span>
+        <div className="buy-zone">
+          <span>{product.price.formatted_with_code}</span>
+          <div className="cart-icon">
+          <FaCartPlus/>
+          </div>
+        </div>
       </div>
     </div>
   );
