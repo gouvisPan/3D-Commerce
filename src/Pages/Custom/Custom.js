@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const Custom = () => {
-  return (
-    <div className="page-container">Custom</div>
-  )
-}
+  return <section className="page-container">Custom</section>;
+};
 
-export default Custom
+export default Custom;

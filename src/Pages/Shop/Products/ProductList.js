@@ -1,13 +1,12 @@
 import React from "react";
-import Grid from "@material-ui/core/Grid";
 import Product from "./Product";
 import "./Products.css";
 
-const ProductList = ({ products }) => {
+const ProductList = ({ products, addToCart }) => {
   return (
     <div className="productList-container">
       {products.map((product) => (
-        <Product product={product} />
+        <Product product={product} addToCart={addToCart} />
       ))}
     </div>
   );

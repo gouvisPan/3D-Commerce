@@ -1,47 +1,48 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
-
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
-.page-container{
-  margin-top: 5rem;
-}
-
-:root{
+:root {
   --color-primary-lightest: #bac8ff;
-  --color-primary-lighter:  #748ffc;
-  --color-primary-light: #4c6ef5; 
+  --color-primary-lighter: #748ffc;
+  --color-primary-light: #4c6ef5;
   --color-primary: #3b5bdb;
   --color-primary-dark: #364fc7;
-  --color-grey-light:#ced4da;
+  --color-grey-light: #ced4da;
   --color-grey: #868e96;
   --color-grey-dark: #495057;
   --color-grey-darker: #343a40;
   --color-grey-black: #212529;
-  
 
   --container-width-small: 20vh;
   --container-width-medium: 40vh;
   --container-width-large: 60vh;
   --container-width-xlarge: 80vh;
+
+  --transition-slow: all 900ms ease;
+  --transition: all 400ms ease;
+  --transition-fast: all 300ms ease;
 }
 
 body {
   margin: 0;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  -ms-overflow-style: none;  /* Internet Explorer 10+ */
-  scrollbar-width: none;  /* Firefox */
-  
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+
   background-color: #ffffffcb;
-  color: var(--color-grey-darker); 
+  color: var(--color-grey-darker);
 }
 
 ::-webkit-scrollbar {
   display: none;
+}
+
+section {
+  margin-top: 8rem;
 }
