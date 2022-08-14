@@ -17,10 +17,10 @@ code {
   --color-grey-darker: #343a40;
   --color-grey-black: #212529;
 
-  --container-width-small: 20vh;
-  --container-width-medium: 40vh;
-  --container-width-large: 60vh;
-  --container-width-xlarge: 80vh;
+  --container-width-small: 20%;
+  --container-width-medium: 40%;
+  --container-width-large: 60%;
+  --container-width-xlarge: 80%;
 
   --transition-slow: all 900ms ease;
   --transition: all 400ms ease;

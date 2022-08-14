@@ -7,13 +7,14 @@
 
 .product-card {
   box-shadow: -2px 2px 3px 2px rgba(0, 0, 0, 0.14);
+  border-radius: 0.3rem;
 }
 
 .product-card img {
   width: 19em;
   height: 11em;
   object-fit: cover;
-
+  border-radius: 0.3rem 0.3rem 0 0;
   align-self: center;
 }
 
@@ -22,9 +23,10 @@
   display: flex;
   flex-direction: column;
   gap: 1.6em;
-  justify-content: space-between;
+
   padding: 0 0.8rem;
 }
+
 .buy-zone {
   display: flex;
   flex-direction: row;

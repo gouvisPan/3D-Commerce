@@ -9,26 +9,28 @@ import { FaShoppingCart } from "react-icons/fa";
 import { HiHome } from "react-icons/hi";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import CartButton from "./UI/CartButton";
 
 const Nav = () => {
   const [activeIcon, setActiveIcon] = useState("#");
 
   return (
     <nav className="fixed-nav">
+      <CartButton />
       <Link
         to="/"
         onClick={() => setActiveIcon("#")}
         className={activeIcon === "#" ? "active a" : "a"}
-        style={{textDecoration : "none"}}
+        style={{ textDecoration: "none" }}
       >
-        <HiHome  />
+        <HiHome />
         <p>Home</p>
       </Link>
       <Link
         to="/shop"
         onClick={() => setActiveIcon("#shop")}
         className={activeIcon === "#shop" ? "active a" : "a"}
-        style={{textDecoration : "none"}}
+        style={{ textDecoration: "none" }}
       >
         <FaShoppingCart />
         <p>Shop</p>
@@ -37,7 +39,7 @@ const Nav = () => {
         to="/custom"
         onClick={() => setActiveIcon("#projects")}
         className={activeIcon === "#projects" ? "active a" : "a"}
-        style={{textDecoration : "none"}}
+        style={{ textDecoration: "none" }}
       >
         <FaPenFancy />
         <p>Custom</p>
@@ -46,8 +48,7 @@ const Nav = () => {
         to="/about"
         onClick={() => setActiveIcon("#about")}
         className={activeIcon === "#about" ? "active a" : "a"}
-        style={{textDecoration : "none"}}
-      
+        style={{ textDecoration: "none" }}
       >
         <FaUser />
         <p>About</p>
@@ -56,7 +57,7 @@ const Nav = () => {
         to="/contact"
         onClick={() => setActiveIcon("#contact")}
         className={activeIcon === "#contact" ? "active a" : "a"}
-        style={{textDecoration : "none"}}
+        style={{ textDecoration: "none" }}
       >
         <MdMail />
         <p>Contact</p>

@@ -1,10 +1,10 @@
 .fixed-nav {
   width: 100%;
-  padding: 1rem 1rem 0.2rem 3rem;
+  padding: 1rem 0rem 0.2rem 1rem;
 
   position: fixed;
   top: -0.5rem;
-  left: 66%;
+  left: 68%;
   z-index: 2;
 
   border-radius: 0 0 0 15px;
@@ -34,10 +34,42 @@
 }
 
 .fixed-nav .a:hover {
-  color: rgb(0, 0, 0);
+  color: var(--color-primary-light);
 }
 .fixed-nav .active {
-  color: rgb(0, 0, 0);
+  color: var(--color-grey-black);
+}
+
+.outer-basket {
+  padding: 1rem;
+  font-size: 22px;
+  border-radius: 50px;
+  background-color: var(--color-primary-dark);
+  color: white;
+}
+.outer-basket:hover {
+  cursor: pointer;
+  background-color: var(--color-primary);
+  box-shadow: -1px 2px 4px 2px rgba(0, 0, 0, 0.18);
+}
+.positioning-class {
+  padding: 0 1.5rem 1.5rem 0rem;
+}
+.wrapper-bottom {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+.badge {
+  position: absolute;
+  margin-left: -1.3rem;
+  margin-top: -0.25rem;
+  top: 0;
+  border-radius: 20px;
+  padding: 0.2rem 0.45rem;
+  background-color: var(--color-grey-black);
+  color: var(--color-primary-light);
 }
 
 @keyframes slidein-low {
