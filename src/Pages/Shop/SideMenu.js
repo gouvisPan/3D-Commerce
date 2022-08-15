@@ -46,6 +46,7 @@ const SideMenu = () => {
   const [choosenOption, setChoosenOption] = useState(models[0]);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const menuCSS = isMenuOpen ? "menu" : "menu expanded";
   const handleClick = (event, key) => {
     setChoosenOption(models[key]);
     setIsMenuOpen(false);
@@ -57,7 +58,7 @@ const SideMenu = () => {
 
   return (
     <div className="wrapper">
-      <div className="menu-container">
+      <div className={menuCSS}>
         {!isMenuOpen && (
           <div className="selected-option" onClick={handleOpening}>
             <p>{choosenOption.name}</p>

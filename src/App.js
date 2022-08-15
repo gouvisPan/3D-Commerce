@@ -5,7 +5,7 @@ import About from "./Pages/About/About";
 import Custom from "./Pages/Custom/Custom";
 import { React, useState, useEffect } from "react";
 import ErrorPage from "./Pages/ErrorPage";
-import Nav from "./components/Nav";
+import Header from "./components/Header";
 import Contact from "./Pages/Contact/Contact";
 import Shop from "./Pages/Shop/Shop";
 import { commerce } from "./lib/Commerce";
@@ -38,7 +38,7 @@ function App() {
   console.log(cart);
   return (
     <Router>
-      <Nav />
+      <Header />
       {isCartShown && <Cart />}
       <Routes>
         <Route path="/" element={<Home />}></Route>

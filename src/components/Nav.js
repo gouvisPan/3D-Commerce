@@ -1,5 +1,5 @@
 import React from "react";
-import "./Nav.css";
+import "./Header.css";
 
 import { MdContactPage } from "react-icons/md";
 import { MdMail } from "react-icons/md";

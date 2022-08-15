@@ -1,8 +1,8 @@
-.menu-container {
+.menu {
   display: flex;
   flex-direction: column;
   border-radius: 20px;
-  height: max-content;
+  height: 4rem;
   padding: 1rem;
   font-weight: 900;
   color: white;
@@ -11,6 +11,10 @@
 
   -webkit-transition: all 1s ease-in;
   transition: all 1s ease-in;
+}
+
+.expanded {
+  height: 8rem;
 }
 
 .page-container {

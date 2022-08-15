@@ -10,7 +10,6 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <section>
-      <img src={logo} className="logo"></img>
       <div className="general-info">
         <div className="main-text">
           <h1>
