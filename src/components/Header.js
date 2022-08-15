@@ -3,11 +3,11 @@ import Nav from "./Nav";
 import logo from "../assets/logo.png";
 import "./Header.css";
 
-const Header = () => {
+const Header = (props) => {
   return (
     <div>
       <img src={logo} className="logo"></img>
-      <Nav />
+      <Nav cartCount={props.cartCount} />
     </div>
   );
 };

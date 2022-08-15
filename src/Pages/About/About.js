@@ -2,14 +2,14 @@ import React from "react";
 
 import Juvp from "../../assets/Juvp.gif";
 import "./About.css";
-import Card from "../../components/UI/Card";
 
 const About = () => {
   return (
     <section className="page-container">
-      <div className="video-container">
-        <img src={Juvp} />
-        <Card>
+      <div className="how-container">
+        <h2 className="title">HOW?</h2>
+        <div className="video-container">
+          <img src={Juvp} />
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. In
             assumenda veritatis ipsum et adipisci saepe tempore pariatur odit
@@ -19,8 +19,12 @@ const About = () => {
             tempore pariatur odit consectetur optio aperiam doloribus aliquam ad
             iusto, praesentium dolores magni vero ex{" "}
           </p>
-        </Card>
+        </div>
       </div>
+
+      <div className="how-container"></div>
+
+      <div className="how-container"></div>
     </section>
   );
 };

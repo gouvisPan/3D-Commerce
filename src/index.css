@@ -22,6 +22,7 @@ code {
   --container-width-large: 60%;
   --container-width-xlarge: 80%;
 
+  --container-side-margin: 4rem;
   --transition-slow: all 900ms ease;
   --transition: all 400ms ease;
   --transition-fast: all 300ms ease;

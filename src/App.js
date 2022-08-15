@@ -9,13 +9,11 @@ import Header from "./components/Header";
 import Contact from "./Pages/Contact/Contact";
 import Shop from "./Pages/Shop/Shop";
 import { commerce } from "./lib/Commerce";
-import Cart from "./components/Cart/Cart";
-import { useSelector } from "react-redux";
+import Cart from "./Pages/Cart/Cart";
 
 function App() {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState({});
-  const isCartShown = useSelector((state) => state.ui.cartIsVisible);
 
   const fetchProducts = async () => {
     const { data } = await commerce.products.list();
@@ -35,11 +33,11 @@ function App() {
     fetchProducts();
     fetchCart();
   }, []);
+
   console.log(cart);
   return (
     <Router>
-      <Header />
-      {isCartShown && <Cart />}
+      <Header cartCount={cart.total_items} />
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route
@@ -49,6 +47,7 @@ function App() {
         <Route path="/custom" element={<Custom />}></Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
+        <Route path="/cart" element={<Cart cart={cart} />}></Route>
         <Route path="*" element={<ErrorPage />}></Route>
       </Routes>
     </Router>

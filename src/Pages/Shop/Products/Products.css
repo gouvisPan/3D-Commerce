@@ -17,6 +17,9 @@
   border-radius: 0.3rem 0.3rem 0 0;
   align-self: center;
 }
+.product-card img:hover {
+  cursor: pointer;
+}
 
 .name-price-container {
   margin-top: 0.5em;

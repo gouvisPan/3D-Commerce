@@ -46,7 +46,8 @@ const SideMenu = () => {
   const [choosenOption, setChoosenOption] = useState(models[0]);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const menuCSS = isMenuOpen ? "menu" : "menu expanded";
+  const menuCSS = isMenuOpen ? "menu expanded" : "menu";
+
   const handleClick = (event, key) => {
     setChoosenOption(models[key]);
     setIsMenuOpen(false);

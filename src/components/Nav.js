@@ -11,12 +11,14 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import CartButton from "./UI/CartButton";
 
-const Nav = () => {
+const Nav = (props) => {
   const [activeIcon, setActiveIcon] = useState("#");
 
   return (
     <nav className="fixed-nav">
-      <CartButton />
+      <Link to="/cart">
+        <CartButton cartCount={props.cartCount} />
+      </Link>
       <Link
         to="/"
         onClick={() => setActiveIcon("#")}
