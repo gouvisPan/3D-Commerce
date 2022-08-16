@@ -31,7 +31,7 @@
 }
 
 .shop-btn {
-  background-color: var(--color-primary-light);
+  background-color: var(--color-primary);
   padding: 0.6rem 1rem;
   width: max-content;
   border-radius: 20px;
@@ -67,7 +67,7 @@
 }
 .adv-icon {
   font-size: 22px;
-  color: var(--color-primary-light);
+  color: var(--color-primary);
   margin-bottom: -0.4rem;
 }
 .advantage h3 {

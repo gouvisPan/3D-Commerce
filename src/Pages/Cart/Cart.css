@@ -1,10 +1,25 @@
-.cart-container {
+.cart-container{
+  margin-top: 6rem;
+  margin-bottom: 10rem;
+  overflow: scroll;
+}
+
+
+.left-cart{
   display: flex;
   flex-direction: column;
 
-  gap: 1rem;
-
   margin-top: 8rem;
-  margin-right: var(--container-side-margin);
   margin-left: var(--container-side-margin);
+}
+.left-cart h2{
+  position: absolute;
+  top:7rem;
+  }
+
+.cart-list{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: flex-end;
 }

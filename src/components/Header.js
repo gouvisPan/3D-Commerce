@@ -7,7 +7,7 @@ const Header = (props) => {
   return (
     <div>
       <img src={logo} className="logo"></img>
-      <Nav cartCount={props.cartCount} />
+      <Nav cartCount={props.cartCount}  />
     </div>
   );
 };

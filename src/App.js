@@ -13,11 +13,17 @@ import Cart from "./Pages/Cart/Cart";
 
 function App() {
   const [products, setProducts] = useState([]);
+  const [categories, setCategories] = useState([]);
   const [cart, setCart] = useState({});
 
   const fetchProducts = async () => {
     const { data } = await commerce.products.list();
     setProducts(data);
+  };
+
+  const fetchCategories = async () => {
+    const { data } = await commerce.categories.list();
+    setCategories(data);
   };
 
   const fetchCart = async () => {
@@ -32,9 +38,10 @@ function App() {
   useEffect(() => {
     fetchProducts();
     fetchCart();
+    fetchCategories();
   }, []);
 
-  console.log(cart);
+  console.log(categories);
   return (
     <Router>
       <Header cartCount={cart.total_items} />
@@ -42,7 +49,7 @@ function App() {
         <Route path="/" element={<Home />}></Route>
         <Route
           path="/shop"
-          element={<Shop products={products} addToCart={addToCartHandler} />}
+          element={<Shop products={products} addToCart={addToCartHandler} models={categories} />}
         ></Route>
         <Route path="/custom" element={<Custom />}></Route>
         <Route path="/about" element={<About />}></Route>

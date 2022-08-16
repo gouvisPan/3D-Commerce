@@ -2,54 +2,18 @@ import React from "react";
 import "./Shop.css";
 import { useState } from "react";
 import { IoIosMenu } from "react-icons/io";
+import Delay from './../../helpers/Delay'
 
-const models = [
-  {
-    id: 1,
-    name: "Toyota MR2",
-    parts: [
-      { id: 1, name: "Vent", desc: "BlahBlah", price: 130 },
-      { id: 2, name: "Bent", desc: "BlahBlah", price: 110 },
-      { id: 1, name: "zent", desc: "BlahBlah", price: 100 },
-    ],
-  },
-  {
-    id: 2,
-    name: "Mazda Rx8",
-    parts: [
-      { id: 1, name: "Vent", desc: "BlahBlah", price: 130 },
-      { id: 2, name: "Bent", desc: "BlahBlah", price: 110 },
-      { id: 1, name: "zent", desc: "BlahBlah", price: 100 },
-    ],
-  },
-  {
-    id: 3,
-    name: "Toyota Celica",
-    parts: [
-      { id: 1, name: "Vent", desc: "BlahBlah", price: 130 },
-      { id: 2, name: "Bent", desc: "BlahBlah", price: 110 },
-      { id: 1, name: "zent", desc: "BlahBlah", price: 100 },
-    ],
-  },
-  {
-    id: 3,
-    name: "Mazda MX-5",
-    parts: [
-      { id: 1, name: "Vent", desc: "BlahBlah", price: 130 },
-      { id: 2, name: "Bent", desc: "BlahBlah", price: 110 },
-      { id: 1, name: "zent", desc: "BlahBlah", price: 100 },
-    ],
-  },
-];
-
-const SideMenu = () => {
-  const [choosenOption, setChoosenOption] = useState(models[0]);
+const SideMenu = (props) => {
+  const myModels = props.models;
+  const [choosenModel, setChoosenModel] = useState(myModels[0]);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuCSS = isMenuOpen ? "menu expanded" : "menu";
 
+
   const handleClick = (event, key) => {
-    setChoosenOption(models[key]);
+    setChoosenModel(myModels[key]);
     setIsMenuOpen(false);
   };
 
@@ -62,20 +26,23 @@ const SideMenu = () => {
       <div className={menuCSS}>
         {!isMenuOpen && (
           <div className="selected-option" onClick={handleOpening}>
-            <p>{choosenOption.name}</p>
+            <p>{choosenModel.name}</p>
             <IoIosMenu />
           </div>
         )}
 
         {isMenuOpen &&
-          models.map((model, key) => (
+          myModels.map((model, key) => (
+            <Delay>
             <div
               className="model-list-item"
               onClick={(event) => handleClick(event, key)}
               key={key}
-            >
+            > 
+
               <p>{model.name}</p>
             </div>
+            </Delay>
           ))}
       </div>
     </div>

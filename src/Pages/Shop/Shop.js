@@ -5,7 +5,7 @@ import "./Shop.css";
 const Shop = (props) => {
   return (
     <section className="page-container">
-      <SideMenu />
+      <SideMenu models={props.models}/>
       <ProductList products={props.products} addToCart={props.addToCart} />
     </section>
   );
