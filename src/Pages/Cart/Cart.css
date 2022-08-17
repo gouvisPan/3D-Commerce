@@ -1,15 +1,22 @@
 .cart-container{
   margin-top: 6rem;
-  margin-bottom: 10rem;
+  margin-bottom: 4rem;
   overflow: scroll;
+  display: flex;
+  justify-content: space-evenly;
+  gap:4rem;
+  
 }
 
 
 .left-cart{
+  flex-grow: 1.15;
   display: flex;
   flex-direction: column;
-
-  margin-top: 8rem;
+  padding: .1rem;
+  height: 60vh;
+  margin: 8rem 0 1rem 0;
+  overflow: scroll;
   margin-left: var(--container-side-margin);
 }
 .left-cart h2{
@@ -22,4 +29,89 @@
   flex-direction: column;
   gap: 1rem;
   justify-content: flex-end;
+}
+
+.right-cart{
+  flex-grow: 1;
+  margin: 6rem 2rem 1rem 0;
+  padding: 0 1rem;
+  box-shadow: -2px 2px 4px 5px rgba(0,0,0, .45);
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.total-price{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.shipping{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.grand-total{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.cart-buttons{
+  display: flex;
+  justify-content: space-between;
+
+}
+.complete-order-btn{
+  background-color: var(--color-primary);
+  border-radius: 20px;
+  padding: .65rem 1rem;
+  
+  color: white;
+  font-size: 16px;
+  margin-bottom: 1rem;  
+}
+
+.back-to-shopping-btn{
+  border: 1px solid var(--color-primary);
+  border-radius: 20px;
+  padding: .65rem 1rem;
+  
+  color: var(--color-primary);
+  font-size: 14px;
+  margin-bottom: 1rem;
+}
+.complete-order-btn:hover{
+  cursor: pointer;
+  background-color: var(--color-primary-light);
+  box-shadow: -1px 1px 3px 2px rgba(0,0,0, .3);
+}
+
+.back-to-shopping-btn{
+  border: 1px solid var(--color-primary);
+  border-radius: 20px;
+  padding: .65rem 1rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  font-size: 14px;
+ 
+}
+
+.back-to-shopping-btn:hover{
+  cursor: pointer;
+  background-color: var(--color-grey-light);
+  box-shadow: -1px 1px 3px 2px rgba(0,0,0, .3);
+}
+
+
+.link{
+  text-decoration: none;
+  margin-bottom: 1rem;
 }

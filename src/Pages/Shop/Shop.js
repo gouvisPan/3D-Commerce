@@ -6,7 +6,7 @@ const Shop = (props) => {
   return (
     <section className="page-container">
       <SideMenu models={props.models}/>
-      <ProductList products={props.products} addToCart={props.addToCart} />
+      <ProductList products={props.products} addToCart={props.addToCart} models={props.models} />
     </section>
   );
 };
