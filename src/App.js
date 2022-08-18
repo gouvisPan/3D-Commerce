@@ -10,8 +10,13 @@ import Contact from "./Pages/Contact/Contact";
 import Shop from "./Pages/Shop/Shop";
 import { commerce } from "./lib/Commerce";
 import Cart from "./Pages/Cart/Cart";
+import { useSelector, useDispatch } from "react-redux";
+import { cartActions } from "./store/cart-slice";
 
 function App() {
+  const dispatch = useDispatch();
+  const myCart = useSelector((state) => state.cart);
+
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
   const [cart, setCart] = useState({});
@@ -27,7 +32,17 @@ function App() {
   };
 
   const fetchCart = async () => {
-    setCart(await commerce.cart.retrieve());
+    const newCart =await commerce.cart.retrieve()
+    setCart(newCart);
+
+    dispatch(cartActions.replaceCart(
+      newCart.id,
+      newCart.line_items,
+      newCart.subtotal_raw,
+      newCart.subtotal_formated,
+      newCart.total_items,
+      newCart.total_unique_items                 
+      ))
   };
 
   const addToCartHandler = async (id) => {
@@ -39,6 +54,10 @@ function App() {
     fetchProducts();
     fetchCart();
     fetchCategories();
+  }, []);
+
+  useEffect(() => {
+    fetchCart();    
   }, []);
 
   console.log(categories);
