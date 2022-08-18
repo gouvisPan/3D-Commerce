@@ -6,6 +6,8 @@ import "./About.css";
 const About = () => {
   return (
     <section className="page-container">
+      <div className="about-container">
+
       <div className="how-container">
         <h2 className="title">HOW?</h2>
         <div className="video-container">
@@ -22,9 +24,14 @@ const About = () => {
         </div>
       </div>
 
-      <div className="how-container"></div>
+      <div className="who-container">
+      <h2 className="title">WHO?</h2>
+      </div>
 
-      <div className="how-container"></div>
+      <div className="where-container">
+      <h2 className="title">WHERE?</h2>
+      </div>
+      </div>
     </section>
   );
 };

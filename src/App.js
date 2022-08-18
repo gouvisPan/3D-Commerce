@@ -48,8 +48,9 @@ function App() {
   const addToCartHandler = async (id) => {
     const newCart = await commerce.cart.add(id, 1);
     setCart(newCart);
-  };
 
+  };
+ 
   useEffect(() => {
     fetchProducts();
     fetchCart();

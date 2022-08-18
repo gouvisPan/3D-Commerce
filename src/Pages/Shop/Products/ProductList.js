@@ -2,6 +2,7 @@ import React from "react";
 import Product from "./Product";
 import "./Products.css";
 import { useState } from "react";
+import { useDispatch,useSelector } from "react-redux";
 
 const ProductList = ({ products, addToCart,models }) => {
 

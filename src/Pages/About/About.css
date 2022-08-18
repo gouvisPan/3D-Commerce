@@ -20,4 +20,23 @@
 h2 {
   font-size: 42px;
   letter-spacing: 0.01px;
+  margin: 2rem 1rem;
+}
+
+.about-container{
+display: flex;
+flex-direction: column;
+gap:3rem;
+}
+
+.how-container{
+  
+}
+
+.who-container{
+align-self: flex-end;
+}
+
+.where-container{
+
 }

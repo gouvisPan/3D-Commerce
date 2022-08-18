@@ -16,17 +16,21 @@
   background-color: var(--color-grey-light);
   height: 4.5rem;
   width:100%;
-  padding: 0 1rem 0 0;
+  padding: 0;
+
   display: flex;
   justify-content:space-between;
   align-items: center;
 }
 
 .product-container:first-child{
-  border-radius: 15px 0 0 15px;
+  border-radius: 15px 15px 0 0;
+  /* border-top: 1px solid var(--color-grey); */
+  
 }
 .product-container:last-child {
-  border-radius:  0 0 0 15px;
+  border-radius:  0 0 15px 15px;
+  /* border-bottom: 1px solid var(--color-grey); */
 }
 
 
