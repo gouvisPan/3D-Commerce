@@ -11,28 +11,26 @@ import Shop from "./Pages/Shop/Shop";
 import { commerce } from "./lib/Commerce";
 import Cart from "./Pages/Cart/Cart";
 import { useDispatch } from "react-redux";
-import cartSlice, { cartActions } from "./store/cart-slice";
+import  { cartActions } from "./store/cart-slice";
+import { commerceActions } from "./store/commerce-slice";
 
 function App() {
   const [products, setProducts] = useState([]);
-  const [categories, setCategories] = useState([]);
-  const [cart, setCart] = useState({});
 
   const dispach = useDispatch();
 
   const fetchProducts = async () => {
     const { data } = await commerce.products.list();
-    setProducts(data);
+    dispach(commerceActions.setProducts(data));
   };
 
   const fetchCategories = async () => {
     const { data } = await commerce.categories.list();
-    setCategories(data);
+    dispach(commerceActions.setCategories(data));
   };
 
   const fetchCart = async () => {
     const cart = await commerce.cart.retrieve();
-    setCart(cart);
     dispach(cartActions.updateCart(cart));
   };
 
@@ -44,7 +42,7 @@ function App() {
   const removeFromCartHandler = async (id) => {
     const newCart = await commerce.cart.remove(id);
     dispach(cartActions.updateCart(newCart));
-    console.log(id);
+    
   };
 
   useEffect(() => {
@@ -64,7 +62,6 @@ function App() {
             <Shop
               products={products}
               addToCart={addToCartHandler}
-              models={categories}
             />
           }
         ></Route>

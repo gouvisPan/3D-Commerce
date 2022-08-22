@@ -3,17 +3,23 @@ import "./Shop.css";
 import { useState } from "react";
 import { IoIosMenu } from "react-icons/io";
 import Delay from './../../helpers/Delay'
-
-const SideMenu = (props) => {
-  const myModels = props.models;
-  const [choosenModel, setChoosenModel] = useState(myModels[0]);
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { commerceActions } from "../../store/commerce-slice";
+const SideMenu = () => {
+  const myCommerce = useSelector(state => state.commerce);
+  const dispach = useDispatch();
+  
+  const myModels = myCommerce.categories;
+  const choosenModel = myModels[0];
+ 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuCSS = isMenuOpen ? "menu expanded" : "menu";
 
 
   const handleClick = (event, key) => {
-    setChoosenModel(myModels[key]);
+    dispach(commerceActions.setActiveCategory(key))
     setIsMenuOpen(false);
   };
 
