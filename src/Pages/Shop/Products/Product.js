@@ -17,7 +17,7 @@ const Product = ({ product, addToCart }) => {
     setIsProductClicked(false);
   };
 
-  console.log(product);
+  // console.log(product);
   return (
     <div>
       <div className="product-card">

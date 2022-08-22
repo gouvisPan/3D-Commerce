@@ -10,15 +10,16 @@ import { HiHome } from "react-icons/hi";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import CartButton from "./UI/CartButton";
+import { useSelector, useDispatch } from "react-redux";
+import { uiActions } from "../store/ui-slice";
 
-const Nav = (props) => {
+const Nav = () => {
   const [activeIcon, setActiveIcon] = useState("#");
 
+  const cartButtonState = useSelector((state) => state.ui.cartIsVisible);
   return (
     <nav className="fixed-nav">
-      <Link to="/cart">
-        <CartButton cartCount={props.cartCount} />
-      </Link>
+      <Link to="/cart">{cartButtonState && <CartButton />}</Link>
       <Link
         to="/"
         onClick={() => setActiveIcon("#")}

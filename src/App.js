@@ -10,11 +10,15 @@ import Contact from "./Pages/Contact/Contact";
 import Shop from "./Pages/Shop/Shop";
 import { commerce } from "./lib/Commerce";
 import Cart from "./Pages/Cart/Cart";
+import { useDispatch } from "react-redux";
+import cartSlice, { cartActions } from "./store/cart-slice";
 
 function App() {
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
   const [cart, setCart] = useState({});
+
+  const dispach = useDispatch();
 
   const fetchProducts = async () => {
     const { data } = await commerce.products.list();
@@ -27,12 +31,20 @@ function App() {
   };
 
   const fetchCart = async () => {
-    setCart(await commerce.cart.retrieve());
+    const cart = await commerce.cart.retrieve();
+    setCart(cart);
+    dispach(cartActions.updateCart(cart));
   };
 
   const addToCartHandler = async (id) => {
     const newCart = await commerce.cart.add(id, 1);
-    setCart(newCart);
+    dispach(cartActions.updateCart(newCart));
+  };
+
+  const removeFromCartHandler = async (id) => {
+    const newCart = await commerce.cart.remove(id);
+    dispach(cartActions.updateCart(newCart));
+    console.log(id);
   };
 
   useEffect(() => {
@@ -41,20 +53,28 @@ function App() {
     fetchCategories();
   }, []);
 
-  console.log(categories);
   return (
     <Router>
-      <Header cartCount={cart.total_items} />
+      <Header />
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route
           path="/shop"
-          element={<Shop products={products} addToCart={addToCartHandler} models={categories} />}
+          element={
+            <Shop
+              products={products}
+              addToCart={addToCartHandler}
+              models={categories}
+            />
+          }
         ></Route>
         <Route path="/custom" element={<Custom />}></Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
-        <Route path="/cart" element={<Cart cart={cart} />}></Route>
+        <Route
+          path="/cart"
+          element={<Cart removeFromCart={removeFromCartHandler} />}
+        ></Route>
         <Route path="*" element={<ErrorPage />}></Route>
       </Routes>
     </Router>
