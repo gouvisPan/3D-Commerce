@@ -5,18 +5,18 @@ const commerceSlice = createSlice({
   initialState: {
     categories: ["All"],
     products: [],
-    activeCategory: {}
+    activeCategory: { name: "All" },
   },
   reducers: {
-    setCategories(state,action) {
+    setCategories(state, action) {
       state.categories = action.payload;
     },
-    setProducts(state,action) {
+    setProducts(state, action) {
       state.products = action.payload;
     },
-    setActiveCategory(state,action){
+    setActiveCategory(state, action) {
       state.activeCategory = state.categories[action.payload];
-    }
+    },
   },
 });
 

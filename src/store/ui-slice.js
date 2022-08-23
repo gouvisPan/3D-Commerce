@@ -9,6 +9,12 @@ const uiSlice = createSlice({
     toggle(state) {
       state.cartIsVisible = !state.cartIsVisible;
     },
+    turnOn(state) {
+      state.cartIsVisible = true;
+    },
+    turnOff(state) {
+      state.cartIsVisible = false;
+    },
   },
 });
 

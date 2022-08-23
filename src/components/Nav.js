@@ -15,6 +15,7 @@ import { uiActions } from "../store/ui-slice";
 
 const Nav = () => {
   const [activeIcon, setActiveIcon] = useState("#");
+  const dispatch = useDispatch();
 
   const cartButtonState = useSelector((state) => state.ui.cartIsVisible);
   return (
@@ -22,7 +23,10 @@ const Nav = () => {
       <Link to="/cart">{cartButtonState && <CartButton />}</Link>
       <Link
         to="/"
-        onClick={() => setActiveIcon("#")}
+        onClick={() => {
+          setActiveIcon("#");
+          dispatch(uiActions.turnOn());
+        }}
         className={activeIcon === "#" ? "active a" : "a"}
         style={{ textDecoration: "none" }}
       >
@@ -31,7 +35,10 @@ const Nav = () => {
       </Link>
       <Link
         to="/shop"
-        onClick={() => setActiveIcon("#shop")}
+        onClick={() => {
+          setActiveIcon("#shop");
+          dispatch(uiActions.turnOn());
+        }}
         className={activeIcon === "#shop" ? "active a" : "a"}
         style={{ textDecoration: "none" }}
       >

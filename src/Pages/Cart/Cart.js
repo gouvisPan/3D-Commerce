@@ -2,11 +2,14 @@ import React from "react";
 import "./Cart.css";
 import ProductListItem from "./ProductListItem";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { uiActions } from "../../store/ui-slice";
 
 const Cart = (props) => {
   const myCart = useSelector((state) => state.cart);
+  const dispatch = useDispatch();
   console.log(myCart);
+
   return (
     <div className="cart-container">
       <div className="left-cart">
@@ -41,7 +44,11 @@ const Cart = (props) => {
           <h4>{myCart.subtotal_raw + 10}.00€</h4>
         </div>
         <div className="cart-buttons">
-          <Link to="/shop" className="link">
+          <Link
+            to="/shop"
+            className="link"
+            onClick={() => dispatch(uiActions.turnOn())}
+          >
             <span className="back-to-shopping-btn">Back to shopping</span>
           </Link>
           <span className="complete-order-btn">Proceed to payment</span>
