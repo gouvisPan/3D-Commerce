@@ -19,23 +19,35 @@ const ProductList = ({ addToCart }) => {
   console.log(commerce);
 
   const displayedProducts = commerce.products.filter((product) => {
-    return product.categories.includes(
+    return product.categories.filter(
       (category) => category.id === commerce.activeCategory.id
     );
   });
+  console.log(displayedProducts);
 
-  commerce.products.map((product) => {
-    product.categories.map((category) => {
-      console.log(category.id === commerce.activeCategory.id);
+  // commerce.products.map((product) => {
+  //   product.categories.map((category) => {
+  //     console.log(category.id === commerce.activeCategory.id);
+  //   });
+  // });
+  let filteredArray = arrayOfElements
+    .filter((element) =>
+      element.subElements.some((subElement) => subElement.surname === 1)
+    )
+    .map((element) => {
+      let newElt = Object.assign({}, element); // copies element
+      return newElt.subElements.filter(
+        (subElement) => subElement.surname === "1"
+      );
     });
-  });
-
-  console.log("DISPLAYED" + displayedProducts);
 
   return (
     <div className="productList-container">
       {displayedProducts.map((product) => (
         <Product product={product} addToCart={addToCart} key={product.id} />
+
+        // {displayedProducts.map((product) => (
+        //   <Product product={product} addToCart={addToCart} key={product.id} />
       ))}
     </div>
   );

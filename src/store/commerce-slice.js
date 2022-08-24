@@ -5,7 +5,7 @@ const commerceSlice = createSlice({
   initialState: {
     categories: ["All"],
     products: [],
-    activeCategory: { name: "All" },
+    activeCategory: { name: "All", id: "cat_zkK6oL0nRoXn0Q" },
   },
   reducers: {
     setCategories(state, action) {
