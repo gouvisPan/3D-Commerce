@@ -1,7 +1,6 @@
 import React from "react";
 import "./Header.css";
 
-import { MdContactPage } from "react-icons/md";
 import { MdMail } from "react-icons/md";
 import { FaUser } from "react-icons/fa";
 import { FaPenFancy } from "react-icons/fa";
@@ -9,9 +8,9 @@ import { FaShoppingCart } from "react-icons/fa";
 import { HiHome } from "react-icons/hi";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import CartButton from "./UI/CartButton";
+import CartButton from "../UI/CartButton";
 import { useSelector, useDispatch } from "react-redux";
-import { uiActions } from "../store/ui-slice";
+import { uiActions } from "../../store/ui-slice";
 
 const Nav = () => {
   const [activeIcon, setActiveIcon] = useState("#");

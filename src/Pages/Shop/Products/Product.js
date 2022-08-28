@@ -6,7 +6,6 @@ import { useState } from "react";
 import ProductInfo from "./ProductInfo";
 
 const Product = ({ product, addToCart }) => {
-  const classes = useStyles();
   const [isProductClicked, setIsProductClicked] = useState(false);
 
   const clickHandler = () => {

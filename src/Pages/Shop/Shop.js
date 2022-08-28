@@ -8,10 +8,8 @@ const Shop = (props) => {
 
   return (
     <section className="page-container">
-      <SideMenu/>
-      <ProductList
-        addToCart={props.addToCart}      
-      />
+      <SideMenu />
+      <ProductList addToCart={props.addToCart} />
     </section>
   );
 };

@@ -1,6 +1,18 @@
-.video-container {
-  width: 90%;
-  height: 16rem;
+.page-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12rem;
+}
+
+.hww-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card-container {
+  width: 100%;
+  height: 55vh;
   display: flex;
   flex-direction: row;
   border-radius: 20px;
@@ -8,16 +20,27 @@
   gap: 2rem;
 }
 
-.video-container img {
+.card-container img {
   width: var(--container-width-large);
-  height: 16rem;
+  height: 55vh;
   border-radius: 20px 0px 0px 20px;
-}
-
-.video-container p {
 }
 
 h2 {
   font-size: 42px;
   letter-spacing: 0.01px;
+}
+
+.right {
+  align-self: flex-end;
+}
+
+.map-container {
+  width: 110%;
+  height: 55vh;
+  border-radius: 10rem;
+}
+
+.last {
+  margin-bottom: 10rem;
 }

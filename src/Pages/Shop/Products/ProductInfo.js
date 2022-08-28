@@ -1,6 +1,7 @@
 import React from "react";
 import Modal from "../../../components/UI/Modal";
 import "./ProductInfo.css";
+import { AiFillCloseCircle } from "react-icons/ai";
 
 const ProductInfo = (props) => {
   const product = props.info;
@@ -11,9 +12,16 @@ const ProductInfo = (props) => {
         <div className="img-container">
           <img src={product.image.url} />
         </div>
-        <p>{product.description.replace("<p>", "").replace("</p>", "")}</p>
-        <button onClick={props.onClose}>close</button>
+        <div className="information">
+          <p>{product.description.replace("<p>", "").replace("</p>", "")}</p>
+          <span>{product.price.formatted_with_code}</span>
+        </div>
       </div>
+      <div className="variants"></div>
+
+      <span onClick={props.onClose} className="close-x">
+        x
+      </span>
     </Modal>
   );
 };

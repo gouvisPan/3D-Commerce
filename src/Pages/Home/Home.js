@@ -6,6 +6,7 @@ import { AiFillPieChart } from "react-icons/ai";
 import { BsShieldFillCheck } from "react-icons/bs";
 import { FaMoneyBill } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import Footer from "../../components/Footer/Footer";
 
 const Home = () => {
   return (
@@ -56,6 +57,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </section>
   );
 };

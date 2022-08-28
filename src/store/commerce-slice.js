@@ -6,6 +6,7 @@ const commerceSlice = createSlice({
     categories: ["All"],
     products: [],
     activeCategory: { name: "All", id: "cat_zkK6oL0nRoXn0Q" },
+    incomingItemId: 0,
   },
   reducers: {
     setCategories(state, action) {
@@ -16,6 +17,9 @@ const commerceSlice = createSlice({
     },
     setActiveCategory(state, action) {
       state.activeCategory = state.categories[action.payload];
+    },
+    addToCart(state, action) {
+      state.incomingItemId = action.payload;
     },
   },
 });

@@ -1,5 +1,5 @@
 import React from "react";
-import "../Header.css";
+import "../Header/Header.css";
 import { MdShoppingBasket } from "react-icons/md";
 import { useDispatch } from "react-redux";
 import { uiActions } from "../../store/ui-slice";

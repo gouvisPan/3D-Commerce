@@ -47,9 +47,6 @@ const ProductList = ({ addToCart }) => {
     <div className="productList-container">
       {displayedProducts.map((product) => (
         <Product product={product} addToCart={addToCart} key={product.id} />
-
-        // {displayedProducts.map((product) => (
-        //   <Product product={product} addToCart={addToCart} key={product.id} />
       ))}
     </div>
   );

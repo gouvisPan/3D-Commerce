@@ -25,6 +25,7 @@ const Cart = (props) => {
               price={item.price.formatted_with_symbol}
               total={item.line_total.formatted_with_symbol}
               removeFromCart={props.removeFromCart}
+              updateQnty={props.updateCartQnty}
             />
           ))}
         </div>
