@@ -1,9 +1,8 @@
 import React from "react";
-import useStyles from "./styles";
 import "./Products.css";
 import { FaCartPlus } from "react-icons/fa";
 import { useState } from "react";
-import ProductInfo from "./ProductInfo";
+import ProductInfo from "./ProductInfo/ProductInfo";
 
 const Product = ({ product, addToCart }) => {
   const [isProductClicked, setIsProductClicked] = useState(false);

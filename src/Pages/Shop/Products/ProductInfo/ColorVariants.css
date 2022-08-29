@@ -1,0 +1,41 @@
+.variants-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.variant {
+  width: 40px;
+  height: 35px;
+}
+.variant:hover {
+  cursor: pointer;
+  box-shadow: -2px 2px 4px 2px rgba(0, 0, 0, 0.15);
+}
+
+.vblack {
+  background-color: var(--color-grey-black);
+}
+.vblack:hover {
+  background-color: var(--color-grey-dark);
+}
+.vred {
+  background-color: rgba(193, 0, 0, 0.798);
+}
+.vred:hover {
+  background-color: rgba(193, 0, 0, 0.6);
+}
+.vwhite {
+  background-color: white;
+  border: solid 1px black;
+}
+.vwhite:hover {
+  background-color: rgba(220, 220, 220, 1);
+}
+.vblue {
+  background-color: rgb(10, 10, 178);
+}
+.vblue:hover {
+  background-color: rgb(10, 10, 178, 0.8);
+}
