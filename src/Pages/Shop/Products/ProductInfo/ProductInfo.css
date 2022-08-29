@@ -1,7 +1,9 @@
-.modal-container{
+.modal-container {
   padding: 3rem 1.8rem;
   display: flex;
+  gap: 3rem;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .product-info-container {
@@ -10,7 +12,6 @@
 }
 
 .product-info-container img {
-  
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -18,12 +19,12 @@
 }
 
 .img-container {
-  width: 26rem;
-  height: 18rem;
+  width: 32em;
+  height: 20rem;
 }
 .img-container img {
-  width: 26rem;
-  height: 18rem;
+  width: 32em;
+  height: 20rem;
 }
 
 .close-x {
@@ -47,6 +48,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  font-weight: 500;
+  font-size: 18px;
 }
 
 .buying-area span {
@@ -55,49 +58,50 @@
   font-size: 24px;
 }
 
-.buying-area{
+.buying-area {
   display: flex;
-  justify-content: flex-end;
-  gap:4rem;
+
+  align-items: center;
+  gap: 4rem;
 
   position: absolute;
   bottom: 0;
-  right: 0;  
-  padding: 2rem;
+  right: 0;
+  padding: 3rem 3rem;
 }
 
-.buying-area span{
-  padding: .2rem;
+.buying-area span {
+  padding: 0.2rem;
 }
 
-.buying-area button{
+.buying-area button {
   font-size: 20px;
   background-color: var(--color-grey-black);
   color: var(--color-grey-light);
   border: 0;
-  padding: .4rem .7rem;
-  border-radius:  15px;
+  padding: 0.4rem 0.7rem;
+  border-radius: 15px;
 }
 
-.buying-area button:hover{
+.buying-area button:hover {
   cursor: pointer;
   background-color: var(--color-primary);
-  box-shadow: -2px 2px 2px 2px rgba(0,0,0,0.15);
+  box-shadow: -2px 2px 2px 2px rgba(0, 0, 0, 0.15);
 }
 
-.price-icon{
+.price-icon {
   font-size: 22px;
   align-self: center;
   margin-left: -3rem;
 }
 
-.quantity-meter{
-display: flex;
-gap: .5rem;
-font-size: 15px;
+.quantity-meter {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 15px;
 }
-.quantity-meter span{
-  padding: .2rem .5rem;
+.quantity-meter span {
+  padding: 0.2rem 0.5rem;
   background-color: var(--color-grey-black);
   font-weight: 400;
   font-size: 18px;
@@ -105,11 +109,17 @@ font-size: 15px;
   border-radius: 6px;
 }
 
-.qnty-btn{
+.qnty-btn {
   font-size: 16x;
   align-self: center;
 }
-.qnty-btn:hover{
+.qnty-btn:hover {
   cursor: pointer;
- 
+}
+
+.inbetween-line {
+  width: 100%;
+  align-self: flex-start;
+  border: 3px solid var(--color-grey-dark);
+  border-radius: 30px;
 }

@@ -2,16 +2,15 @@ import React from "react";
 import Modal from "../../../../components/UI/Modal";
 import "./ProductInfo.css";
 import { ImPriceTags } from "react-icons/im";
-import { TiMinus} from "react-icons/ti";
+import { TiMinus } from "react-icons/ti";
 import { TiPlus } from "react-icons/ti";
 import ColorVariants from "./ColorVariants";
 import QuantityUpdater from "../../../Cart/QuantityUpdater";
 import { useState } from "react";
 
-
 const ProductInfo = (props) => {
   const product = props.info;
-  const [qnty,setQnty] = useState(1);
+  const [qnty, setQnty] = useState(1);
 
   console.log(product);
 
@@ -19,17 +18,16 @@ const ProductInfo = (props) => {
     console.log("CLICKED");
     props.onClose();
     props.addToCart(product.id);
-  }
+  };
 
-  const addOneHandler = () =>{
+  const addOneHandler = () => {
     setQnty(qnty + 1);
-  }
-  const subtractOneHandler = () =>{
-    if(qnty > 1){
+  };
+  const subtractOneHandler = () => {
+    if (qnty > 1) {
       setQnty(qnty - 1);
     }
-  }
-
+  };
 
   return (
     <Modal onClose={props.onClose}>
@@ -46,16 +44,17 @@ const ProductInfo = (props) => {
             <ColorVariants />
           </div>
         </div>
+        <div className="inbetween-line"></div>
         <div className="buying-area">
-             <span>{product.price.formatted_with_code}</span>
-             <ImPriceTags className="price-icon"></ImPriceTags>
-             <div className="quantity-meter">
-                <TiMinus onClick = {subtractOneHandler} className="qnty-btn"/>
-                <span>{qnty}</span>
-                <TiPlus onClick={addOneHandler} className="qnty-btn"/>
-             </div>
-             <button onClick={addToCartClickHandler}>Add to Cart</button>
-         </div>      
+          <span>{product.price.formatted_with_code}</span>
+          <ImPriceTags className="price-icon"></ImPriceTags>
+          <div className="quantity-meter">
+            <TiMinus onClick={subtractOneHandler} className="qnty-btn" />
+            <span>{qnty}</span>
+            <TiPlus onClick={addOneHandler} className="qnty-btn" />
+          </div>
+          <button onClick={addToCartClickHandler}>Add to Cart</button>
+        </div>
       </div>
     </Modal>
   );

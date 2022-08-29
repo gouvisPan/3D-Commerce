@@ -66,6 +66,7 @@
 .cart-buttons {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 1rem;
 }
 .complete-order-btn {
   background-color: var(--color-primary);

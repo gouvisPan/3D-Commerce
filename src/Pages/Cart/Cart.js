@@ -52,7 +52,13 @@ const Cart = (props) => {
           >
             <span className="back-to-shopping-btn">Back to shopping</span>
           </Link>
-          <span className="complete-order-btn">Proceed to payment</span>
+          <Link
+            to="/checkout"
+            className="link"
+            onClick={() => dispatch(uiActions.turnOff())}
+          >
+            <span className="complete-order-btn">Proceed to payment</span>
+          </Link>
         </div>
       </div>
     </div>
