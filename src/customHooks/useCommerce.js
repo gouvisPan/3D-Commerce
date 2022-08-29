@@ -34,7 +34,6 @@ const useCommerce = () => {
   };
 
   const updateCartQntyHandler = async (id, quantity) => {
-    console.log("updated" + id);
     const response = await commerce.cart.update(id, { quantity });
     dispach(cartActions.updateCart(response));
   };

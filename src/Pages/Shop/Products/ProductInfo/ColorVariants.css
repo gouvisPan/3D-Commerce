@@ -3,11 +3,13 @@
   align-items: center;
   gap: 1rem;
   margin-top: 2rem;
+
 }
 
 .variant {
   width: 40px;
   height: 35px;
+  border-radius: 5px;
 }
 .variant:hover {
   cursor: pointer;
@@ -31,7 +33,7 @@
   border: solid 1px black;
 }
 .vwhite:hover {
-  background-color: rgba(220, 220, 220, 1);
+  background-color: rgba(210, 210, 210, 1);
 }
 .vblue {
   background-color: rgb(10, 10, 178);

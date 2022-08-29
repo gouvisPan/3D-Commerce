@@ -36,7 +36,7 @@ const Product = ({ product, addToCart }) => {
         </div>
       </div>
       {isProductClicked && (
-        <ProductInfo info={product} onClose={closeClickHandler} />
+        <ProductInfo info={product} onClose={closeClickHandler} addToCart={addToCart}/>
       )}
     </div>
   );
