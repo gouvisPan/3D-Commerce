@@ -120,6 +120,7 @@
 .inbetween-line {
   width: 100%;
   align-self: flex-start;
-  border: 3px solid var(--color-grey-dark);
-  border-radius: 30px;
+  height: 2px;
+  border-top: 5px solid var(--color-grey-dark);
+  border-radius: 3px;
 }

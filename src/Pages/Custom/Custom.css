@@ -1,0 +1,86 @@
+    .hero-section{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-left: 4rem;
+    gap:1rem;
+  }
+  
+  .hero-section img {
+    width: 19rem;
+    height: 17rem;
+    border-radius: 8px;
+  }
+  
+  .custom-text p {
+    font-size: 20px;
+    color: var(--color-grey);
+    margin-top: -1.4rem;
+  }
+  .shop-btn{
+    margin-top: .4rem;
+    text-align: center;
+    font-size: 18px;
+    width: 100%;
+  }
+
+  .custom-text h1 {
+    font-size: 40px;
+    letter-spacing: 0.05px;
+  }
+
+  .custom-text {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin-top: -1rem;
+  }
+
+  
+  .custom-info-container{
+    align-self: center;
+    width: var(--container-width-xlarge);
+    margin-bottom: 5rem;
+
+    display: flex;
+    flex-direction: column;
+
+    margin-top: -3rem;
+    box-shadow: -2px 2px 4px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    padding: 2rem 3rem;
+
+  }
+
+  .custom-info-timeline{
+    display: grid;
+    justify-items: center;
+    /* column-gap:2rem; */
+    row-gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  .num-icon{
+    color: var(--color-primary);
+    font-weight: 500;
+    font-size: 42px;
+    }
+    
+  .blue{
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: .05px;
+    color: var(--color-primary);
+  }
+  .icon-line{
+    align-self: center;
+    width: 90%;
+    border-radius: 14px;
+    border-top: 3px solid var(--color-primary);
+  }
+  .custom-info-container span{
+   text-align: center;
+   font-weight: 600;
+  }

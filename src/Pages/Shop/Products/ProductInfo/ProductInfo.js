@@ -44,7 +44,7 @@ const ProductInfo = (props) => {
             <ColorVariants />
           </div>
         </div>
-        <div className="inbetween-line"></div>
+        <hr className="inbetween-line"></hr>
         <div className="buying-area">
           <span>{product.price.formatted_with_code}</span>
           <ImPriceTags className="price-icon"></ImPriceTags>
