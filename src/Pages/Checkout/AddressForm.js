@@ -19,7 +19,7 @@ const AddressForm = () => {
   const [shippingSubdivision, setShippingSubdivision] = useState("");
   const [shippingOptions, setShippingOptions] = useState([]);
   const [shippingOption, setShippingOption] = useState("");
-  g;
+
   return (
     <div>
       <Typography variant="h6" gutterBottom>
