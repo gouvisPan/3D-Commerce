@@ -13,11 +13,11 @@ const Custom = () => {
         <img src={upload}></img>
         <div className="custom-text">
           <h1>
-            Print your <span className="blue">CUSTOM</span> designs with us
+            Print your <span className="blue">CUSTOM</span> designs with us.
           </h1>
           <p>
             Upload a scanned image of your item or an .exa file with your custom
-            design
+            design.
           </p>
           {/* <Link to="/shop" className="link"> */}
           <span className="shop-btn">UPLOAD FILE</span>

@@ -79,6 +79,7 @@
   width: 90%;
   border-radius: 14px;
   border-top: 3px solid var(--color-grey-black);
+  
 }
 .custom-info-container span {
   text-align: center;
