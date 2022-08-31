@@ -21,6 +21,11 @@ const AddressForm = ({ checkoutToken }) => {
   const [shippingOptions, setShippingOptions] = useState([]);
   const [shippingOption, setShippingOption] = useState("");
 
+  const countries = Object.entries(shippingCountries).map(([code, name]) => ({
+    id: code,
+    label: name,
+  }));
+
   const fetchShippingCountries = async (checkoutTokenId) => {
     const { countries } = await commerce.services.localeListShippingCountries(
       checkoutTokenId
@@ -30,9 +35,21 @@ const AddressForm = ({ checkoutToken }) => {
     setShippingCountry(Object.keys(countries)[0]);
   };
 
+  const fetchSubdivisions = async (countryCode) => {
+    const { subdivisions } = await commerce.services.localeListSubdivisions(
+      countryCode
+    );
+    setShippingSubdivisions(subdivisions);
+    setShippingSubdivision(Object.keys(subdivisions)[0]);
+  };
+
   useEffect(() => {
     fetchShippingCountries(checkoutToken.id);
   }, []);
+
+  useEffect(() => {
+    fetchShippingCountries(checkoutToken.id);
+  }, [shi]);
 
   return (
     <div>
@@ -50,11 +67,18 @@ const AddressForm = ({ checkoutToken }) => {
             <FormInput required name="zip" label="ZIP / Postal Code" />
             <Grid item xs={12} sm={6}>
               <InputLabel>Shipping Country</InputLabel>
-              <Select value={shippingCountry} fullWidth onChange={1}>
-                <MenuItem key={1} value={1}>
-                  Select Me
-                </MenuItem>
+              <Select
+                value={shippingCountry}
+                fullWidth
+                onChange={(e) => setShippingCountry(e.target.value)}
+              >
+                {countries.map((country) => (
+                  <MenuItem key={country.id} value={country.id}>
+                    {country.label}
+                  </MenuItem>
+                ))}
               </Select>
+              {/*
               <Select value={shippingCountry} fullWidth onChange={1}>
                 <MenuItem key={2} value={1}>
                   Select Me
@@ -64,7 +88,7 @@ const AddressForm = ({ checkoutToken }) => {
                 <MenuItem key={3} value={1}>
                   Select Me
                 </MenuItem>
-              </Select>
+              </Select> */}
             </Grid>
           </Grid>
         </form>
