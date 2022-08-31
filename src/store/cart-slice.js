@@ -8,6 +8,7 @@ const cartSlice = createSlice({
     total_items: 0,
     total_unique_items: 0,
     subtotal_raw: 0,
+    cart: {},
   },
   reducers: {
     updateCart(state, action) {
@@ -16,6 +17,9 @@ const cartSlice = createSlice({
       state.total_items = action.payload.total_items;
       state.total_unique_items = action.payload.total_unique_items;
       state.subtotal_raw = action.payload.subtotal.raw;
+    },
+    setCart(state, action) {
+      state.cart = action.payload;
     },
   },
 });

@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
 import { useForm, FormProvider } from "react-hook-form";
 import FormInput from "./FormInput";
 import {
@@ -10,8 +10,9 @@ import {
   Typography,
 } from "@material-ui/core";
 import "./Forms.css";
+import { commerce } from "../../lib/Commerce";
 
-const AddressForm = () => {
+const AddressForm = ({ checkoutToken }) => {
   const methods = useForm();
   const [shippingCountries, setShippingCountries] = useState([]);
   const [shippingCountry, setShippingCountry] = useState("");
@@ -19,6 +20,19 @@ const AddressForm = () => {
   const [shippingSubdivision, setShippingSubdivision] = useState("");
   const [shippingOptions, setShippingOptions] = useState([]);
   const [shippingOption, setShippingOption] = useState("");
+
+  const fetchShippingCountries = async (checkoutTokenId) => {
+    const { countries } = await commerce.services.localeListShippingCountries(
+      checkoutTokenId
+    );
+    console.log(countries);
+    setShippingCountries(countries);
+    setShippingCountry(Object.keys(countries)[0]);
+  };
+
+  useEffect(() => {
+    fetchShippingCountries(checkoutToken.id);
+  }, []);
 
   return (
     <div>
@@ -36,12 +50,18 @@ const AddressForm = () => {
             <FormInput required name="zip" label="ZIP / Postal Code" />
             <Grid item xs={12} sm={6}>
               <InputLabel>Shipping Country</InputLabel>
-              <Select
-                value={shippingCountry}
-                fullWidth
-                onChange={(e) => setShippingCountry(e.target.value)}
-              >
+              <Select value={shippingCountry} fullWidth onChange={1}>
                 <MenuItem key={1} value={1}>
+                  Select Me
+                </MenuItem>
+              </Select>
+              <Select value={shippingCountry} fullWidth onChange={1}>
+                <MenuItem key={2} value={1}>
+                  Select Me
+                </MenuItem>
+              </Select>
+              <Select value={shippingCountry} fullWidth onChange={1}>
+                <MenuItem key={3} value={1}>
                   Select Me
                 </MenuItem>
               </Select>
