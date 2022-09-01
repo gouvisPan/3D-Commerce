@@ -25,6 +25,12 @@ const AddressForm = ({ checkoutToken }) => {
     id: code,
     label: name,
   }));
+  const subdivisions = Object.entries(shippingSubdivisions).map(
+    ([code, name]) => ({
+      id: code,
+      label: name,
+    })
+  );
 
   const fetchShippingCountries = async (checkoutTokenId) => {
     const { countries } = await commerce.services.localeListShippingCountries(
@@ -43,13 +49,30 @@ const AddressForm = ({ checkoutToken }) => {
     setShippingSubdivision(Object.keys(subdivisions)[0]);
   };
 
+  const fetchShippingOptions = async (
+    checkoutTokenId,
+    country,
+    region = null
+  ) => {
+    const options = await commerce.services.getShippingOptions(
+      checkoutTokenId,
+      { country, region }
+    );
+    setShippingSubdivisions(subdivisions);
+    setShippingSubdivision(Object.keys(subdivisions)[0]);
+  };
+
   useEffect(() => {
     fetchShippingCountries(checkoutToken.id);
   }, []);
 
   useEffect(() => {
-    fetchShippingCountries(checkoutToken.id);
-  }, [shi]);
+    if (shippingCountry) fetchSubdivisions(shippingCountry);
+  }, [shippingCountry]);
+
+  useEffect(() => {
+    if (shippingSubdivision) fetchSubdivisions(shippingCountry);
+  }, [shippingCountry]);
 
   return (
     <div>
@@ -78,17 +101,18 @@ const AddressForm = ({ checkoutToken }) => {
                   </MenuItem>
                 ))}
               </Select>
-              {/*
-              <Select value={shippingCountry} fullWidth onChange={1}>
-                <MenuItem key={2} value={1}>
-                  Select Me
-                </MenuItem>
+              <InputLabel>Shipping Division</InputLabel>
+              <Select
+                value={shippingSubdivision}
+                fullWidth
+                onChange={(e) => setShippingSubdivision(e.target.value)}
+              >
+                {subdivisions.map((subdivision) => (
+                  <MenuItem key={subdivision.id} value={subdivision.id}>
+                    {subdivision.label}
+                  </MenuItem>
+                ))}
               </Select>
-              <Select value={shippingCountry} fullWidth onChange={1}>
-                <MenuItem key={3} value={1}>
-                  Select Me
-                </MenuItem>
-              </Select> */}
             </Grid>
           </Grid>
         </form>
