@@ -1,0 +1,15 @@
+.btn-area {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 3rem;
+}
+
+.btn-area button {
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 0.2rem 0.7rem;
+}
+
+.btn-backToCart {
+}
