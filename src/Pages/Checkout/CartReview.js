@@ -1,15 +1,28 @@
 import React from "react";
+import "./Checkout.css";
 
 const CartReview = ({ token }) => {
   return (
-    <div>
+    <div className="review-container">
       <h3>Order summary</h3>
-      {token.live.line_items.map((product) => (
+      <ul>
+      {token.line_items.map((product) => (
         <li>
-          {product.name} {product.quantity}{" "}
-          {product.line_total.formatted_with_symbol}
+          <span>{product.name}</span>
+          <span className="qnty">x{product.quantity}</span>
+          <span> {product.line_total.formatted_with_symbol}</span>
         </li>
       ))}
+      </ul>
+
+      <div className="total-section">
+        <span>Subtotal: </span>
+        <span>{token.subtotal.formatted_with_symbol}</span>
+        <span>Shipping cost: </span>
+        <span>{token.shipping.price.formatted_with_symbol}</span>
+        <span>Total: </span>
+        <span>{token.total.formatted_with_symbol}</span>
+      </div>
     </div>
   );
 };

@@ -1,11 +1,14 @@
+.checkout-page-container{
+  margin: 4rem 0;
+}
+
+
 .checkout-card {
   width: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-
   margin: auto;
-  margin-top: 8rem;
   padding: 2rem 3rem 4rem 3rem;
   border-radius: 20px;
   box-shadow: -2px 2px 4px 2px rgba(0, 0, 0, 0.2);
@@ -14,4 +17,43 @@
 .card-container h3 {
   font-size: 28px;
   align-self: center;
+}
+
+.review-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.review-container h3{
+  align-self: flex-start;
+  margin-left: 2rem;
+}
+
+.review-container ul{
+  list-style-type: none;
+  margin:auto;
+  align-self: center;
+}
+.review-container li{
+  margin-top: .6rem;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+ 
+}
+
+li span{
+  justify-self: flex-start;
+  width:7rem;
+}
+
+li span:first-child{
+  font-weight: 500;
+  width: 12rem;
+}
+
+.total-section{
+  display: grid;
+  
 }

@@ -11,9 +11,10 @@ const Cart = (props) => {
   console.log(myCart);
 
   return (
-    <div className="cart-container">
+    <div className="page-container">
+      <h2>Your Cart</h2>
+      <div className="cart-container">
       <div className="left-cart">
-        <h2>Your Cart</h2>
         <div className="cart-list">
           {myCart.items.map((item) => (
             <ProductListItem
@@ -26,8 +27,8 @@ const Cart = (props) => {
               total={item.line_total.formatted_with_symbol}
               removeFromCart={props.removeFromCart}
               updateQnty={props.updateCartQnty}
-            />
-          ))}
+              />
+              ))}
         </div>
       </div>
       <div className="right-cart">
@@ -49,18 +50,19 @@ const Cart = (props) => {
             to="/shop"
             className="link"
             onClick={() => dispatch(uiActions.turnOn())}
-          >
+            >
             <span className="back-to-shopping-btn">Back to shopping</span>
           </Link>
           <Link
             to="/checkout"
             className="link"
             onClick={() => dispatch(uiActions.turnOff())}
-          >
+            >
             <span className="complete-order-btn">Proceed to payment</span>
           </Link>
         </div>
       </div>
+    </div>
     </div>
   );
 };

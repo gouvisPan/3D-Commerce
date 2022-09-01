@@ -41,17 +41,18 @@ const Checkout = () => {
     setShippingData(data);
     stepChange(1);
   };
+
   const Confirmation = () => <div>Confirmation</div>;
 
   const Form = () =>
     activeStep === 0 ? (
       <AddressForm checkoutToken={checkoutToken} next={handleNextClicked} />
     ) : (
-      <PaymentForm />
+      <PaymentForm  shippingData={shippingData} token={checkoutToken}/>
     );
 
   return (
-    <div>
+    <div className="checkout-page-container">
       <div className="checkout-card ">
         <h3>Checkout</h3>
         <Stepper activeStep={activeStep} className="stepper">
