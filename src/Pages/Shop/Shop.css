@@ -1,3 +1,7 @@
+.shop-container {
+  margin: 6.5rem 1rem;
+}
+
 .menu {
   display: flex;
   flex-direction: row;
@@ -5,13 +9,13 @@
   border-radius: 0px 0px 20px 20px;
   height: 3rem;
   width: 12rem;
-  padding-bottom: .2rem;
-  margin-top: -.4rem;
+  padding-bottom: 0.2rem;
+  margin-top: -0.4rem;
   font-weight: 900;
   color: white;
-  position: fixed ;
-  top:0;
-  left:10rem;
+  position: fixed;
+  top: 0;
+  left: 10rem;
   background-color: var(--color-primary);
 
   -webkit-transition: all 0.12s ease-in;
@@ -20,14 +24,14 @@
 
 .expanded {
   height: 3.8rem;
-  width:32rem;
+  width: 32rem;
   border-radius: 0px 0px 20px 20px;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
 }
-.expanded-content{
-display: flex;
-flex-direction: row;
+.expanded-content {
+  display: flex;
+  flex-direction: row;
 }
 
 .page-container {
@@ -37,7 +41,7 @@ flex-direction: row;
 
 .model-list-item {
   border-radius: 15px;
-  padding: .1rem 0.2rem;
+  padding: 0.1rem 0.2rem;
 }
 
 .model-list-item p :hover {
@@ -88,5 +92,59 @@ flex-direction: row;
   }
   100% {
     transform: scaleY(1);
+  }
+}
+
+@media (max-width: 600px) {
+  .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 0px 0px 20px 20px;
+    height: 3rem;
+    width: 100vw;
+    padding-bottom: 0.2rem;
+
+    font-weight: 900;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--color-primary);
+
+    -webkit-transition: all 0.12s ease-in;
+    transition: all 0.12s ease-in;
+  }
+
+  .expanded {
+    height: 18rem;
+    width: 100vw;
+    border-radius: 0px 0px 20px 20px;
+    padding-left: 2rem;
+    -webkit-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+  }
+  .expanded-content {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .selected-option {
+    margin-top: 0.4rem;
+    padding: 0.3rem 2rem;
+    gap: 0rem;
+
+    font-size: 24px;
+  }
+
+  .model-list-item {
+    border-radius: 15px;
+    padding: 0rem 0.2rem;
+  }
+
+  .model-list-item p {
+    font-weight: 600;
+    font-size: 22px;
+    padding: 0rem 0.5rem;
   }
 }

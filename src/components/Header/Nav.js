@@ -11,13 +11,15 @@ import { Link } from "react-router-dom";
 import CartButton from "../UI/CartButton";
 import { useSelector, useDispatch } from "react-redux";
 import { uiActions } from "../../store/ui-slice";
+import useWindowSize from "../../customHooks/useWindowSize";
 
 const Nav = () => {
   const [activeIcon, setActiveIcon] = useState("#");
   const dispatch = useDispatch();
-
+  const [height, width] = useWindowSize();
   const cartButtonState = useSelector((state) => state.ui.cartIsVisible);
-  return (
+
+  const desktopNav = (
     <nav className="fixed-nav">
       <Link to="/cart">{cartButtonState && <CartButton />}</Link>
       <Link
@@ -73,6 +75,56 @@ const Nav = () => {
       </Link>
     </nav>
   );
+
+  const mobileNav = (
+    <nav className="mobile-nav">
+      <Link
+        to="/"
+        onClick={() => {
+          setActiveIcon("#");
+          dispatch(uiActions.turnOn());
+        }}
+        className={activeIcon === "#" ? "active a" : "a"}
+        style={{ textDecoration: "none" }}
+      >
+        <HiHome />
+      </Link>
+      <Link
+        to="/shop"
+        onClick={() => {
+          setActiveIcon("#shop");
+          dispatch(uiActions.turnOn());
+        }}
+        className={activeIcon === "#shop" ? "active a" : "a"}
+        style={{ textDecoration: "none" }}
+      >
+        <FaShoppingCart />
+      </Link>
+      <Link
+        to="/custom"
+        onClick={() => setActiveIcon("#projects")}
+        className={activeIcon === "#projects" ? "active a" : "a"}
+        style={{ textDecoration: "none" }}
+      >
+        <FaPenFancy />
+      </Link>
+      <Link
+        to="/contact"
+        onClick={() => setActiveIcon("#contact")}
+        className={activeIcon === "#contact" ? "active a" : "a"}
+        style={{ textDecoration: "none" }}
+      >
+        <MdMail />
+      </Link>
+      <Link to="/cart">
+        <CartButton />
+      </Link>
+    </nav>
+  );
+
+  const navBar = width > 600 ? desktopNav : mobileNav;
+
+  return navBar;
 };
 
 export default Nav;

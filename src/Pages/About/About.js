@@ -6,7 +6,7 @@ import Footer from "../../components/Footer/Footer";
 
 const About = () => {
   return (
-    <section className="page-container">
+    <section className="about-container">
       <div className="hww-container">
         <h2 className="title">HOW?</h2>
         <div className="card-container">

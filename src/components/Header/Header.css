@@ -4,8 +4,8 @@
 
   position: fixed;
   top: -0.5rem;
-  right:0;
-  
+  right: 0;
+
   z-index: 2;
 
   border-radius: 0 0 0 15px;
@@ -39,6 +39,34 @@
 }
 .fixed-nav .active {
   color: var(--color-grey-black);
+}
+
+.mobile-nav {
+  position: fixed;
+  bottom: 0;
+  height: 2rem;
+  width: 100%;
+
+  padding: 1.2rem 0;
+  font-size: 22px;
+  background-color: var(--color-primary-dark);
+  color: white;
+
+  display: flex;
+  justify-content: space-evenly;
+
+  z-index: 5;
+  margin-bottom: -0.1rem;
+}
+
+.mobile-nav .a {
+  color: white;
+  font-size: 2rem;
+  border-radius: 30px;
+}
+
+.mobile-nav .active {
+  box-shadow: -1px 1px 3px 2px rgba(0, 0, 0, 0.18);
 }
 
 .outer-basket {
@@ -93,5 +121,26 @@
 
   to {
     top: 90%;
+  }
+}
+
+@media (max-width: 600px) {
+  .logo {
+    display: none;
+  }
+
+  .outer-basket {
+    padding: 0;
+    font-size: 2rem;
+    border-radius: 50px;
+    background-color: var(--color-primary-dark);
+    color: white;
+  }
+
+  .positioning-class {
+    padding: 0 0 0 0rem;
+  }
+  .wrapper-bottom {
+    position: static;
   }
 }

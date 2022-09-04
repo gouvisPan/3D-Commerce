@@ -79,3 +79,77 @@
   text-decoration: none;
   margin-top: 1rem;
 }
+
+@media (max-width: 600px) {
+  .general-info {
+    width: 100%;
+    margin: auto;
+  }
+
+  .general-info img {
+    display: none;
+  }
+
+  .main-text {
+    width: 100%;
+    align-items: center;
+  }
+  .main-text h1 {
+    font-size: 2.2rem;
+    border: 2px solid var(--color-grey-black);
+    border-radius: 8px;
+    padding: 0.3rem 1.2rem;
+    margin: 4rem 1rem 0.5rem 1rem;
+  }
+
+  .general-info p {
+    font-size: 0.8rem;
+    margin: 0 1.5rem;
+  }
+
+  .advantage-info {
+    width: auto;
+    margin-top: 4rem;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .advantages {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+
+    justify-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .advantage-info h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+  .adv-icon {
+    font-size: 22px;
+    color: var(--color-primary);
+    margin-bottom: -0.4rem;
+  }
+  .advantage h3 {
+    margin-bottom: -0.4rem;
+    font-size: 1.2rem;
+  }
+
+  .shop-btn {
+    align-self: center;
+    padding: 0.8rem 1rem;
+    width: 100%;
+    margin: 0.8rem 2rem 0 2rem;
+
+    text-align: center;
+  }
+
+  .link {
+    display: flex;
+    align-content: center;
+    width: 100vw;
+  }
+}

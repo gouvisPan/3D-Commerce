@@ -1,7 +1,6 @@
-.checkout-page-container{
+.checkout-page-container {
   margin: 4rem 0;
 }
-
 
 .checkout-card {
   width: 100vh;
@@ -24,36 +23,41 @@
   flex-direction: column;
 }
 
-.review-container h3{
+.review-container h3 {
   align-self: flex-start;
   margin-left: 2rem;
 }
 
-.review-container ul{
+.review-container ul {
   list-style-type: none;
-  margin:auto;
+  margin: auto;
   align-self: center;
 }
-.review-container li{
-  margin-top: .6rem;
+.review-container li {
+  margin-top: 0.6rem;
 
   display: flex;
   justify-content: flex-start;
   align-items: center;
- 
 }
 
-li span{
+li span {
   justify-self: flex-start;
-  width:7rem;
+  width: 7rem;
 }
 
-li span:first-child{
+li span:first-child {
   font-weight: 500;
   width: 12rem;
 }
 
-.total-section{
+.total-section {
   display: grid;
-  
+}
+
+.img-thumbnail {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 20px;
+  margin-right: 1rem;
 }

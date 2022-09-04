@@ -1,7 +1,8 @@
-.page-container {
+.about-container {
   display: flex;
   flex-direction: column;
   gap: 12rem;
+  margin: 4.2rem 4rem 8rem 4rem;
 }
 
 .hww-container {
@@ -9,7 +10,7 @@
   flex-direction: column;
   gap: 1.5rem;
 }
-.card-container p{
+.card-container p {
   margin: 1rem;
 }
 .card-container {
@@ -45,4 +46,10 @@ h2 {
 
 .last {
   margin-bottom: 10rem;
+}
+
+@media (max-width: 600px) {
+  .about-container {
+    margin: 1rem 0 0 5rem;
+  }
 }

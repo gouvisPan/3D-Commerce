@@ -48,3 +48,14 @@ body {
 section {
   margin-top: 8rem;
 }
+
+@media (max-width: 600px) {
+  section {
+    margin: auto;
+    margin-top: 0rem;
+    margin-bottom: 4.3rem;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
+  }
+}

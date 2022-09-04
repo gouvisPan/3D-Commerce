@@ -7,7 +7,7 @@ const Shop = (props) => {
   const dispatch = useDispatch();
 
   return (
-    <section className="page-container">
+    <section className="shop-container">
       <SideMenu />
       <ProductList addToCart={props.addToCart} />
     </section>

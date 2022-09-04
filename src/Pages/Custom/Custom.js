@@ -8,7 +8,7 @@ import { MdLocalShipping } from "react-icons/md";
 
 const Custom = () => {
   return (
-    <section className="page-container">
+    <section className="custom-container">
       <div className="hero-section">
         <img src={upload}></img>
         <div className="custom-text">
@@ -20,7 +20,7 @@ const Custom = () => {
             design.
           </p>
           {/* <Link to="/shop" className="link"> */}
-          <span className="shop-btn">UPLOAD FILE</span>
+          <span className="upload-btn">UPLOAD FILE</span>
           {/* </Link> */}
         </div>
       </div>

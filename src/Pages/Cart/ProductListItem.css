@@ -12,8 +12,8 @@
 
 .product-container {
   border-radius: 0;
-  box-shadow: -2px 2px 4px 2px rgba(0, 0, 0, 0.1);
-  background-color: var(--color-grey-light);
+  box-shadow: -2px 1px 3px 1px rgba(0, 0, 0, 0.1);
+  background-color: var(--color-grey-lighter);
   height: 4.5rem;
   width: 100%;
   padding: 0 1rem 0 0;
@@ -79,4 +79,50 @@
 .product-title h3 {
   font-size: 20px;
   color: var(--color-grey-dark);
+}
+
+@media (max-width: 600px) {
+  .product-container img {
+    width: 6rem;
+    height: 4.5rem;
+    border-radius: 0;
+  }
+
+  .product-container span {
+    font-size: 14px;
+    color: var(--color-grey-black);
+    flex-grow: 0.1;
+    justify-self: flex-end;
+  }
+
+  .product-title {
+    display: flex;
+    flex: 0.6;
+    align-items: center;
+    margin-left: 1rem;
+  }
+  .product-container span {
+    flex: 0.5;
+  }
+  .quantity-updater {
+    align-items: center;
+    flex: 0.5;
+  }
+
+  .qnt-btn {
+    color: black;
+    font-size: 18px;
+  }
+
+  .qnt-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+  .product-title span {
+    font-size: 14px;
+  }
+  .product-title h3 {
+    font-size: 16px;
+  }
 }

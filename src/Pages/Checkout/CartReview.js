@@ -2,17 +2,19 @@ import React from "react";
 import "./Checkout.css";
 
 const CartReview = ({ token }) => {
+  console.log(token);
   return (
     <div className="review-container">
       <h3>Order summary</h3>
       <ul>
-      {token.line_items.map((product) => (
-        <li>
-          <span>{product.name}</span>
-          <span className="qnty">x{product.quantity}</span>
-          <span> {product.line_total.formatted_with_symbol}</span>
-        </li>
-      ))}
+        {token.line_items.map((product) => (
+          <li>
+            <img src={product.image.url} className="img-thumbnail" />
+            <span>{product.name}</span>
+            <span className="qnty">x{product.quantity}</span>
+            <span> {product.line_total.formatted_with_symbol}</span>
+          </li>
+        ))}
       </ul>
 
       <div className="total-section">
