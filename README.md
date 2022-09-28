@@ -3,7 +3,7 @@
 # 3D - Commerce
 ---
 ## Description 
-This App is beeing developed for Enterprise use. A friend of mine ventured into the 3D printing field and i was glad to help him by deploying an e-commerce website for wis company. The displayed site is a fully functional Alpha Demo  of the WebApp. The end product is stored in a private repository for several reasons, but the availiable sourcecode is sufficient for the creation of a fully functional e-commerce website hence can be used as a template.
+This App is beeing developed for Enterprise use. A friend of mine ventured into the 3D printing field and i was glad to help him by deploying an e-commerce website for his company. The displayed site is a fully functional Beta Demo  of the WebApp. The end product is stored in a private repository for several reasons, but the availiable sourcecode is sufficient for the creation of a fully functional e-commerce website hence can be used as a template.
 
 ## Features
 - Admin can CRUD store items via the commerce-js interface
