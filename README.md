@@ -23,6 +23,8 @@ This App is beeing developed for Enterprise use. A friend of mine ventured into 
 - React-Hook-Form for form handling and validation
 - Stripe for payment management
 
+---
+---
 ## More Screenshot of the App's BETA
 
 
