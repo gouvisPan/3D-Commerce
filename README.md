@@ -20,7 +20,10 @@ This App is beeing developed for Enterprise use. A friend of mine ventured into 
 - Commerce-js API for commerce management
 - GoogleMaps API for displaying company's location
 - Material UI for styling A FEW components
-- Formik and useForm hook for form handling and validation
+- React-Hook-Form for form handling and validation
+- Stripe for payment management
+
+## More Screenshot of the App's BETA
 
 
 ![Shop - Desktop](https://user-images.githubusercontent.com/97959624/192726246-a0a0a1ea-5049-426c-b0ca-c4d56ff41508.png)
