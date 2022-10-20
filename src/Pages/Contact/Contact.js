@@ -4,6 +4,8 @@ import { RiWhatsappFill } from "react-icons/ri";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
 import FormInput from "../Checkout/FormInput";
+import MailForm from './MailForm'
+
 import { useForm, FormProvider } from "react-hook-form";
 
 const Contact = () => {
@@ -24,15 +26,7 @@ const Contact = () => {
       </div>
       <div className="mail-form-container">
         <h3>Direct Mail</h3>
-        <FormProvider {...methods}>
-          <form onSubmit="" className="mail-form">
-            <FormInput required name="name" label="Full Name" />
-            <FormInput required name="email" label="Email" />
-            <FormInput required name="subject" label="Subject" />
-            <FormInput required name="message" label="2" />
-          </form>
-        </FormProvider>
-        <span className="sub-btn">Send</span>
+          <MailForm/>
       </div>
     </section>
   );

@@ -1,0 +1,57 @@
+.error-m {
+  color: #b81616;
+  letter-spacing: 0.5px;
+  font-weight: 300;
+  font-size: 1rem;
+  position: absolute;
+  left: 8rem;
+  bottom: -1.8rem;
+}
+
+input {
+  height: 100%;
+  padding: 0.2rem;
+  background-color: rgb(199, 196, 196);
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  width: 15rem;
+}
+
+textarea {
+  background-color: rgb(199, 196, 196);
+  width: 15rem;
+  margin-left: 3rem;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.text-field-content {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+.text-field-content label {
+  font-size: 1.2rem;
+  flex: 0.2 1 0;
+  text-align: start;
+  justify-self: flex-end;
+}
+.text-field-content input {
+  flex: 0.4 1 0;
+}
+
+.field {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.message {
+  border-radius: 0.5rem;
+  height: 7rem;
+}
+.field {
+  width: 20rem;
+  height: 2.4rem;
+}
