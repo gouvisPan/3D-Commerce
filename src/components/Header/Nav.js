@@ -7,14 +7,14 @@ import { FaPenFancy } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
 import { HiHome } from "react-icons/hi";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import CartButton from "../UI/CartButton";
 import { useSelector, useDispatch } from "react-redux";
 import { uiActions } from "../../store/ui-slice";
 import useWindowSize from "../../customHooks/useWindowSize";
 
 const Nav = () => {
-  const [activeIcon, setActiveIcon] = useState("#");
+  // const [activeIcon, setActiveIcon] = useState("#");
   const dispatch = useDispatch();
   const [height, width] = useWindowSize();
   const cartButtonState = useSelector((state) => state.ui.cartIsVisible);
@@ -22,100 +22,109 @@ const Nav = () => {
   const desktopNav = (
     <nav className="fixed-nav">
       <Link to="/cart">{cartButtonState && <CartButton />}</Link>
-      <Link
+      <NavLink
+        className={(navData) => (navData.isActive ? "active a" : "a")}
         to="/"
-        onClick={() => {
-          setActiveIcon("#");
-          dispatch(uiActions.turnOn());
-        }}
-        className={activeIcon === "#" ? "active a" : "a"}
+        // onClick={() => {
+        //   setActiveIcon("#");
+        //   dispatch(uiActions.turnOn());
+        // }}
+        // className={activeIcon === "#" ? "active a" : "a"}
         style={{ textDecoration: "none" }}
       >
         <HiHome />
         <p>Home</p>
-      </Link>
-      <Link
+      </NavLink>
+      <NavLink
         to="/shop"
-        onClick={() => {
-          setActiveIcon("#shop");
-          dispatch(uiActions.turnOn());
-        }}
-        className={activeIcon === "#shop" ? "active a" : "a"}
+        // onClick={() => {
+        //   setActiveIcon("#shop");
+        //   dispatch(uiActions.turnOn());
+        // }}
+        // className={activeIcon === "#shop" ? "active a" : "a"}
+        className={(navData) => (navData.isActive ? "active a" : "a")}
         style={{ textDecoration: "none" }}
       >
         <FaShoppingCart />
         <p>Shop</p>
-      </Link>
-      <Link
+      </NavLink>
+      <NavLink
         to="/custom"
-        onClick={() => setActiveIcon("#projects")}
-        className={activeIcon === "#projects" ? "active a" : "a"}
+        // onClick={() => setActiveIcon("#projects")}
+        // className={activeIcon === "#projects" ? "active a" : "a"}
+        className={(navData) => (navData.isActive ? "active a" : "a")}
         style={{ textDecoration: "none" }}
       >
         <FaPenFancy />
         <p>Custom</p>
-      </Link>
-      <Link
+      </NavLink>
+      <NavLink
         to="/about"
-        onClick={() => setActiveIcon("#about")}
-        className={activeIcon === "#about" ? "active a" : "a"}
+        // onClick={() => setActiveIcon("#about")}
+        // className={activeIcon === "#about" ? "active a" : "a"}
+        className={(navData) => (navData.isActive ? "active a" : "a")}
         style={{ textDecoration: "none" }}
       >
         <FaUser />
         <p>About</p>
-      </Link>
-      <Link
+      </NavLink>
+      <NavLink
         to="/contact"
-        onClick={() => setActiveIcon("#contact")}
-        className={activeIcon === "#contact" ? "active a" : "a"}
+        // onClick={() => setActiveIcon("#contact")}
+        // className={activeIcon === "#contact" ? "active a" : "a"}
+        className={(navData) => (navData.isActive ? "active a" : "a")}
         style={{ textDecoration: "none" }}
       >
         <MdMail />
         <p>Contact</p>
-      </Link>
+      </NavLink>
     </nav>
   );
 
   const mobileNav = (
     <nav className="mobile-nav">
-      <Link
+      <NavLink
+        className={(navData) => (navData.isActive ? "active a" : "a")}
         to="/"
-        onClick={() => {
-          setActiveIcon("#");
-          dispatch(uiActions.turnOn());
-        }}
-        className={activeIcon === "#" ? "active a" : "a"}
+        // onClick={() => {
+        //   setActiveIcon("#");
+        //   dispatch(uiActions.turnOn());
+        // }}
+        // className={activeIcon === "#" ? "active a" : "a"}
         style={{ textDecoration: "none" }}
       >
         <HiHome />
-      </Link>
-      <Link
+      </NavLink>
+      <NavLink
         to="/shop"
-        onClick={() => {
-          setActiveIcon("#shop");
-          dispatch(uiActions.turnOn());
-        }}
-        className={activeIcon === "#shop" ? "active a" : "a"}
+        className={(navData) => (navData.isActive ? "active a" : "a")}
+        // onClick={() => {
+        //   setActiveIcon("#shop");
+        //   dispatch(uiActions.turnOn());
+        // }}
+        // className={activeIcon === "#shop" ? "active a" : "a"}
         style={{ textDecoration: "none" }}
       >
         <FaShoppingCart />
-      </Link>
-      <Link
+      </NavLink>
+      <NavLink
         to="/custom"
-        onClick={() => setActiveIcon("#projects")}
-        className={activeIcon === "#projects" ? "active a" : "a"}
+        className={(navData) => (navData.isActive ? "active a" : "a")}
+        // onClick={() => setActiveIcon("#projects")}
+        // className={activeIcon === "#projects" ? "active a" : "a"}
         style={{ textDecoration: "none" }}
       >
         <FaPenFancy />
-      </Link>
-      <Link
+      </NavLink>
+      <NavLink
         to="/contact"
-        onClick={() => setActiveIcon("#contact")}
-        className={activeIcon === "#contact" ? "active a" : "a"}
+        className={(navData) => (navData.isActive ? "active a" : "a")}
+        // onClick={() => setActiveIcon("#contact")}
+        // className={activeIcon === "#contact" ? "active a" : "a"}
         style={{ textDecoration: "none" }}
       >
         <MdMail />
-      </Link>
+      </NavLink>
       <Link to="/cart">
         <CartButton />
       </Link>

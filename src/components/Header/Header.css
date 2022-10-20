@@ -104,13 +104,11 @@
 .logo {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 1rem;
 
-  border-radius: 20px;
   margin-top: 1rem;
   margin-left: 0.8rem;
-  width: 7rem;
-  height: 5.5rem;
+  width: 12rem;
   z-index: 3;
 }
 
