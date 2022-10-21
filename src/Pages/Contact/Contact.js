@@ -13,6 +13,7 @@ const Contact = () => {
 
   return (
     <section className="contact-container">
+      <MailForm/>
       <div className="get-in-touch-container">
         <h1>Don't hesitate to get in touch.</h1>
         <div className="contact-grid">
@@ -24,10 +25,7 @@ const Contact = () => {
           <span>Complete the email form.</span>
         </div>
       </div>
-      <div className="mail-form-container">
-        <h3>Direct Mail</h3>
-          <MailForm/>
-      </div>
+     
     </section>
   );
 };

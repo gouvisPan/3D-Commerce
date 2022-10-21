@@ -66,6 +66,7 @@ const MailForm = (props) => {
     >
       {(formik) => (
         <div className="form-container">
+          <h3>Direct Mail</h3>
           <Form className="form-content" ref={form}>
             <div className="text-fields">
               <TextField
@@ -94,14 +95,9 @@ const MailForm = (props) => {
                 ismessage="true"
               />
             </div>
-            <div className="buttons">
               <button type="submit" className="submit-btn">
                 Send
-              </button>
-              <button onClick={props.onClose} className="closing-btn">
-                Nevermind
-              </button>
-            </div>
+              </button>   
           </Form>
           {successState && <Success message="E-mail sent!" />}
           <Error message="Something went wrong" />

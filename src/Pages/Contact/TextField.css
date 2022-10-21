@@ -11,16 +11,16 @@
 input {
   height: 100%;
   padding: 0.2rem;
-  background-color: rgb(199, 196, 196);
+  background-color: var(--color-grey-light);
   border-radius: 0.5rem;
   font-size: 1.2rem;
   width: 15rem;
 }
 
 textarea {
-  background-color: rgb(199, 196, 196);
+  background-color: var(--color-grey-light);
+  padding: 0.2rem;
   width: 15rem;
-  margin-left: 3rem;
   border-radius: 0.5rem;
   font-size: 1.2rem;
 }
@@ -28,11 +28,13 @@ textarea {
 .text-field-content {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
   position: relative;
+  gap: 2rem;
 }
 .text-field-content label {
   font-size: 1.2rem;
-  flex: 0.2 1 0;
+  width: 10rem;
   text-align: start;
   justify-self: flex-end;
 }
