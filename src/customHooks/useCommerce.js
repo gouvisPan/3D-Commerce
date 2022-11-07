@@ -43,6 +43,21 @@ const useCommerce = () => {
     dispach(cartActions.updateCart(response));
   };
 
+  const handleCheckout = async (tokenId, order) => {
+    try {
+      const response = await commerce.checkout.capture(tokenId, order);
+      dispach(commerceActions.setOrder(response));
+
+      refreshCart();
+    } catch (err) {
+      console.log(err);
+    }
+  };
+  const refreshCart = async () => {
+    const response = await commerce.cart.refresh();
+    dispach(cartActions.setCart(response));
+  };
+
   useEffect(() => {
     fetchProducts();
     fetchCart();
@@ -53,6 +68,7 @@ const useCommerce = () => {
     addToCartHandler,
     removeFromCartHandler,
     updateCartQntyHandler,
+    handleCheckout,
   };
 };
 

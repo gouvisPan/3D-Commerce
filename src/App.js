@@ -18,6 +18,7 @@ function App() {
     addToCartHandler: addToCart,
     removeFromCartHandler: removeFromCart,
     updateCartQntyHandler: updateCartQnty,
+    handleCheckout,
   } = useCommerce();
 
   return (
@@ -38,7 +39,10 @@ function App() {
             />
           }
         ></Route>
-        <Route path="/checkout" element={<Checkout />}></Route>
+        <Route
+          path="/checkout"
+          element={<Checkout handleCheckout={handleCheckout} />}
+        ></Route>
         <Route path="*" element={<ErrorPage />}></Route>
       </Routes>
     </Router>

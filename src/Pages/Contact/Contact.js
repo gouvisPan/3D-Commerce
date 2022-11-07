@@ -4,7 +4,7 @@ import { RiWhatsappFill } from "react-icons/ri";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
 import FormInput from "../Checkout/FormInput";
-import MailForm from './MailForm'
+import MailForm from "./MailForm";
 
 import { useForm, FormProvider } from "react-hook-form";
 
@@ -13,19 +13,24 @@ const Contact = () => {
 
   return (
     <section className="contact-container">
-      <MailForm/>
+      <MailForm />
       <div className="get-in-touch-container">
-        <h1>Don't hesitate to get in touch.</h1>
+        <h3>Get in touch.</h3>
         <div className="contact-grid">
-          <BsFillTelephoneFill className="contact-icon" />
           <span>Make a direct call.</span>
-          <RiWhatsappFill className="contact-icon" />
+          <a href="tel:5554280940">
+            <BsFillTelephoneFill className="contact-icon" />
+          </a>
           <span>Leave us a message.</span>
-          <MdEmail className="contact-icon" />
+          <a href="https://api.whatsapp.com/send?phone=23100000">
+            <RiWhatsappFill className="contact-icon" />
+          </a>
           <span>Complete the email form.</span>
+          <a href="tel:5554280940">
+            <MdEmail className="contact-icon" />
+          </a>
         </div>
       </div>
-     
     </section>
   );
 };

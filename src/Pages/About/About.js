@@ -8,7 +8,7 @@ const About = () => {
   return (
     <section className="about-container">
       <div className="hww-container">
-        <h2 className="title">HOW?</h2>
+        <h2 className="title">How?</h2>
         <div className="card-container">
           <img src={Juvp} />
           <p>
@@ -24,7 +24,7 @@ const About = () => {
       </div>
 
       <div className="hww-container">
-        <h2 className="title right">WHERE?</h2>
+        <h2 className="title right">Where?</h2>
         <div className="card-container">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. In
@@ -40,7 +40,7 @@ const About = () => {
       </div>
 
       <div className="hww-container last">
-        <h2 className="title left">WHY?</h2>
+        <h2 className="title left">Why?</h2>
         <div className="card-container">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. In

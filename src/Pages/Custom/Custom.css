@@ -40,6 +40,14 @@
   width: 92%;
   margin-right: 5rem;
 }
+.upload-btn:hover {
+  cursor: pointer;
+  background-color: var(--color-primary-lighter);
+}
+.upload-btn:active {
+  cursor: pointer;
+  background-color: var(--color-primary-light);
+}
 
 .custom-text h1 {
   font-size: 40px;

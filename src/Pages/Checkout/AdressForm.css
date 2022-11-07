@@ -1,0 +1,34 @@
+.btn-area {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 4rem;
+}
+
+.btn-area button {
+  font-size: 20px;
+  padding: 0.5rem 0.8rem;
+  border-radius: 10px;
+  border: 0px;
+}
+
+.btn-area button:hover {
+  cursor: pointer;
+  filter: brightness(110%);
+}
+.btn-area button:active {
+  filter: brightness(90%);
+}
+
+.btn-backToCart {
+  background-color: var(--color-grey-dark);
+  color: white;
+  width: 6rem;
+}
+
+.btn-toCheckout {
+  border: 0px;
+  background-color: var(--color-primary);
+  color: white;
+  padding: 0.2rem 0.4rem;
+}

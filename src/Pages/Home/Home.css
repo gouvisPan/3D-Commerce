@@ -45,6 +45,10 @@
   background-color: var(--color-primary-lighter);
 }
 
+.shop-btn:active {
+  background-color: var(--color-primary-light);
+}
+
 .advantage-info {
   width: var(--container-width-xlarge);
   margin-top: 10rem;

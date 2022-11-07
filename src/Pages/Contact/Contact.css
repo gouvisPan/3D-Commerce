@@ -7,41 +7,45 @@
   color: var(--color-grey-black);
 }
 
-.contact-grid {
-  margin: auto;
-  margin-top: 8rem;
-  display: grid;
-  justify-items: center;
-  /* column-gap:2rem; */
-  row-gap: 2.2rem;
-  grid-template-columns: 0.5fr 1fr;
-  width: 30rem;
-}
-.get-in-touch-container{
+.get-in-touch-container {
   position: fixed;
   top: 0;
   right: 0;
+  width: 35vw;
+  padding: 6rem 1rem;
 }
 
-.get-in-touch-container h1 {
-  font-size: 48px;
-  margin-bottom: 4rem;
-  margin: auto;
+.get-in-touch-container h3 {
+  margin-top: 4rem;
+  font-size: 42px;
   color: var(--color-grey-darker);
 }
+
+.contact-grid {
+  margin: auto;
+  margin-top: 5rem;
+  display: grid;
+  justify-items: center;
+  /* column-gap:2rem; */
+  row-gap: 2rem;
+  grid-template-columns: 1fr 0.4fr;
+  width: 30rem;
+}
+
 .contact-grid span {
   margin-left: 3rem;
   justify-self: start;
 
+  color: var(--color-grey-darker);
   font-weight: 600;
   align-self: center;
+  font-size: 22px;
 }
 .contact-icon {
   font-size: 42px;
   color: var(--color-primary);
   justify-self: start;
 }
-
 
 .mail-form-container {
   color: white;

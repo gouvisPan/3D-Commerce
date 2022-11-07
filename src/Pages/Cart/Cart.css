@@ -1,14 +1,14 @@
 .cart-general-container {
-  margin: 8rem 3rem;
-  gap: 0;
+  margin: 8rem 3rem 0rem 3rem;
 }
 
 .cart-container {
   margin-bottom: 4rem;
   overflow: scroll;
   display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
-  gap: 5rem;
+  gap: 2rem;
 }
 
 .left-cart {
@@ -17,15 +17,14 @@
   flex-direction: column;
   padding: 0.1rem;
   height: 60vh;
-  margin: 0.5rem 0 1rem 0;
+  margin: 0.5rem;
   overflow-y: scroll;
   overflow-x: hidden;
   margin-left: var(--container-side-margin);
 }
 
-.left-cart h2 {
-  position: absolute;
-  top: 7rem;
+.cart-general-container h2 {
+  font-size: 42px;
 }
 
 .cart-list {
@@ -36,15 +35,17 @@
 }
 
 .right-cart {
-  height: 25vh;
   flex-grow: 0.4;
-  margin: 0 2rem 1rem 0;
-  padding: 0 1rem;
-  box-shadow: -2px 2px 3px 2px rgba(0, 0, 0, 0.2);
-  border-radius: 20px;
+  margin: 0.5rem;
+  width: 40vw;
+  padding: 0.2rem 1rem;
+  box-shadow: 2px 2px 3px 2px rgba(80, 80, 80, 0.15);
+  border-radius: 5px;
+  align-self: end;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  margin-right: 5rem;
 }
 
 .right-cart h4 {
@@ -65,44 +66,36 @@
   justify-content: space-between;
   margin-bottom: 1rem;
 }
+
+.cart-buttons a {
+  font-size: 16px;
+  border: 0px;
+  color: white;
+}
+
+.cart-buttons a:hover {
+  cursor: pointer;
+  filter: brightness(110%);
+}
+.cart-buttons a:active {
+  filter: brightness(90%);
+}
+
 .complete-order-btn {
   background-color: var(--color-primary);
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 0.65rem 1rem;
-
   color: white;
   font-size: 16px;
   margin-bottom: 1rem;
 }
 
 .back-to-shopping-btn {
-  border: 1px solid var(--color-primary);
-  border-radius: 20px;
+  background-color: var(--color-grey-dark);
+  border-radius: 10px;
+  color: white;
+  width: 6rem;
   padding: 0.65rem 1rem;
-
-  color: var(--color-primary);
-  font-size: 16px;
-  margin-bottom: 1rem;
-}
-.complete-order-btn:hover {
-  cursor: pointer;
-  background-color: var(--color-primary-light);
-  box-shadow: -1px 1px 3px 2px rgba(0, 0, 0, 0.3);
-}
-
-.back-to-shopping-btn {
-  border: 1px solid var(--color-primary);
-  border-radius: 20px;
-  padding: 0.65rem 1rem;
-  font-weight: 700;
-  color: var(--color-primary);
-  font-size: 14px;
-}
-
-.back-to-shopping-btn:hover {
-  cursor: pointer;
-  background-color: var(--color-grey-light);
-  box-shadow: -1px 1px 3px 2px rgba(0, 0, 0, 0.08);
 }
 
 .link {

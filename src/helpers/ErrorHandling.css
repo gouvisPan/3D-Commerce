@@ -1,7 +1,8 @@
 .notification {
   position: fixed;
   top: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   font-size: 1.2rem;
   color: white;
   letter-spacing: 0.5px;
@@ -12,10 +13,10 @@
   align-items: center;
   margin-top: -0.1rem;
   padding: 0.2rem 1rem;
-  z-index: 12;
+  z-index: 4;
   animation: 4s alternate slidein;
 
-  background-color: rgb(61, 61, 61);
+  background-color: black;
 }
 
 .error {

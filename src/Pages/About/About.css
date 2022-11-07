@@ -1,8 +1,8 @@
 .about-container {
   display: flex;
   flex-direction: column;
-  gap: 12rem;
-  margin: 4.2rem 4rem 8rem 4rem;
+  gap: 8rem;
+  margin: 8.5rem 4rem 8rem 4rem;
 }
 
 .hww-container {
@@ -10,8 +10,17 @@
   flex-direction: column;
   gap: 1.5rem;
 }
+
+.hww-container .title {
+  color: var(--color-grey-darker);
+  font-size: 42px;
+  letter-spacing: 0.01px;
+
+  margin-bottom: 1rem;
+}
+
 .card-container p {
-  margin: 1rem;
+  margin: 0.5rem;
 }
 .card-container {
   width: 100%;
@@ -19,7 +28,7 @@
   display: flex;
   flex-direction: row;
   border-radius: 20px;
-  box-shadow: 4px 4px 6px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 4px 4px 6px 5px rgba(0, 0, 0, 0.1);
   gap: 2rem;
 }
 
@@ -27,11 +36,6 @@
   width: var(--container-width-large);
   height: 45vh;
   border-radius: 20px 0px 0px 20px;
-}
-
-h2 {
-  font-size: 42px;
-  letter-spacing: 0.01px;
 }
 
 .right {

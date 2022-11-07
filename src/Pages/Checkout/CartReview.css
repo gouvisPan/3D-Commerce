@@ -1,0 +1,84 @@
+.review-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.review-container h3 {
+  align-self: flex-start;
+  margin-left: 2rem;
+}
+
+.review-container ul {
+  list-style-type: none;
+  margin: auto;
+  align-self: center;
+  width: 90%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.4rem;
+}
+
+.review-container li {
+  margin-top: 0.6rem;
+  padding-bottom: 0.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li span {
+  justify-self: flex-start;
+  width: 7rem;
+  flex: 1 1 0;
+}
+.item-desc {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0;
+}
+.item-name {
+  font-weight: 500;
+}
+.item-quantity {
+  color: var(--color-grey);
+  font-size: 14px;
+}
+.item-price {
+  flex: 0.1 1 0;
+}
+.total-section {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4rem;
+}
+
+.img-thumbnail {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 20px;
+  margin-right: 1rem;
+}
+
+.total-section {
+  align-self: center;
+
+  display: flex;
+  gap: 1rem;
+}
+
+.change-section {
+  padding-top: 1.5rem;
+}
+.price-desc {
+}
+
+.price-info {
+  justify-self: flex-end;
+  flex: 0.05 1 0;
+}
+.last-item {
+  border-bottom: 0px;
+}

@@ -12,12 +12,12 @@ import {
 } from "@material-ui/core";
 import "./Forms.css";
 import { commerce } from "../../lib/Commerce";
-import "./AdressFotm.css";
+import "./AdressForm.css";
 
 const AddressForm = ({ checkoutToken, next }) => {
   const methods = useForm();
-  console.log({checkoutToken});
-  
+  console.log({ checkoutToken });
+
   const [shippingCountries, setShippingCountries] = useState([]);
   const [shippingCountry, setShippingCountry] = useState("");
   const [shippingSubdivisions, setShippingSubdivisions] = useState([]);
@@ -36,7 +36,10 @@ const AddressForm = ({ checkoutToken, next }) => {
     })
   );
 
-  const options = shippingOptions.map((option) =>  ({ id: option.id, label: `${option.description} - (${option.price.formatted_with_symbol})` }));
+  const options = shippingOptions.map((option) => ({
+    id: option.id,
+    label: `${option.description} - (${option.price.formatted_with_symbol})`,
+  }));
 
   const fetchShippingCountries = async (checkoutTokenId) => {
     const { countries } = await commerce.services.localeListShippingCountries(
@@ -78,7 +81,12 @@ const AddressForm = ({ checkoutToken, next }) => {
   }, [shippingCountry]);
 
   useEffect(() => {
-    if (shippingSubdivision) fetchShippingOptions(checkoutToken.id,shippingCountry, shippingSubdivision);
+    if (shippingSubdivision)
+      fetchShippingOptions(
+        checkoutToken.id,
+        shippingCountry,
+        shippingSubdivision
+      );
   }, [shippingSubdivision]);
 
   return (
@@ -151,7 +159,7 @@ const AddressForm = ({ checkoutToken, next }) => {
           </Grid>
           <div className="btn-area">
             <Link to="/cart">
-            <button className="btn-backToCart">Back to Cart</button>
+              <button className="btn-backToCart">Cart</button>
             </Link>
             <button className="btn-toCheckout" type="submit">
               Next

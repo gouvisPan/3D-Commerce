@@ -6,17 +6,17 @@ const TextField = (props) => {
   const [field, meta] = useField(props);
 
   return (
-    <div className="text-field-content">
-      <label htmlFor={field.name}>{props.label}</label>
+    <div className={props.className + "text-field-content"}>
       {props.ismessage ? (
         <textarea
           rows="5"
+          cols="120"
           {...field}
           {...props}
           placeholder={props.pholder}
         ></textarea>
       ) : (
-        <input {...field} {...props} placeholder={props.pHolder} />
+        <input {...field} {...props} placeholder={props.pholder} />
       )}
       <ErrorMessage component="div" name={field.name} className="error-m" />
     </div>

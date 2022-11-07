@@ -15,7 +15,7 @@
   color: white;
   position: fixed;
   top: 0;
-  left: 15rem;
+  left: 20rem;
   background-color: var(--color-primary);
 
   -webkit-transition: all 0.12s ease-in;

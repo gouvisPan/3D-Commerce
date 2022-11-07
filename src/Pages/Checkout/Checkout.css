@@ -1,5 +1,5 @@
 .checkout-page-container {
-  margin: 4rem 0;
+  margin: 6rem 0;
 }
 
 .checkout-card {
@@ -18,46 +18,36 @@
   align-self: center;
 }
 
-.review-container {
+.confirmation-message {
   display: flex;
   flex-direction: column;
-}
-
-.review-container h3 {
-  align-self: flex-start;
-  margin-left: 2rem;
-}
-
-.review-container ul {
-  list-style-type: none;
-  margin: auto;
-  align-self: center;
-}
-.review-container li {
-  margin-top: 0.6rem;
-
-  display: flex;
-  justify-content: flex-start;
   align-items: center;
 }
 
-li span {
-  justify-self: flex-start;
-  width: 7rem;
+.confirmation-message h3 {
+  font-size: 22px;
+}
+.confirmation-message p {
+  margin-top: -1rem;
+  margin-bottom: 2rem;
+  font-size: 15px;
+  color: var(--color-grey);
+}
+.confirmation-message a {
+  font-size: 16px;
+  padding: 0.4rem 0.6rem;
+  border-radius: 10px;
+
+  border: 0px;
+  background-color: var(--color-primary);
+  color: white;
+  text-decoration: none;
 }
 
-li span:first-child {
-  font-weight: 500;
-  width: 12rem;
+.confirmation-message button:hover {
+  cursor: pointer;
+  filter: brightness(110%);
 }
-
-.total-section {
-  display: grid;
-}
-
-.img-thumbnail {
-  width: 2rem;
-  height: 2rem;
-  border-radius: 20px;
-  margin-right: 1rem;
+.confirmation-message button:active {
+  filter: brightness(90%);
 }

@@ -6,7 +6,7 @@ import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 import * as Yup from "yup";
-import Error from "../../helpers/Error"
+import Error from "../../helpers/Error";
 import Success from "../../helpers/Success";
 
 const MailForm = (props) => {
@@ -24,10 +24,10 @@ const MailForm = (props) => {
     message: Yup.string()
       .max(400, "Must be up to 400 characters")
       .required("Message is required"),
-    email: Yup.string().email("Email is invalid").required("Email is Required"),
+    email: Yup.string().email("Email is invalid").required("Email is required"),
   });
 
-  const onSubmit = (e) => {
+  const onSubmit = (resetForm) => {
     setErrorState(false);
     setSuccessState(false);
 
@@ -43,6 +43,7 @@ const MailForm = (props) => {
           console.log(result.text);
           console.log("Success");
           setSuccessState(true);
+          resetForm();
         },
         (error) => {
           console.log(error.text);
@@ -56,36 +57,40 @@ const MailForm = (props) => {
       initialValues={{
         name: "",
         email: "",
+        subject: "",
         message: "",
       }}
       validationSchema={validate}
-      onSubmit={(values) => {
+      onSubmit={(values, { resetForm }) => {
         console.log(values);
-        onSubmit();
+        onSubmit(resetForm);
       }}
     >
       {(formik) => (
         <div className="form-container">
-          <h3>Direct Mail</h3>
           <Form className="form-content" ref={form}>
+            <h3>Direct Mail</h3>
             <div className="text-fields">
               <TextField
                 label="Name"
                 name="name"
-                pholder=" full name"
+                pholder=" Full name"
                 type="text"
+                className=""
               />
               <TextField
                 label="Email"
                 name="email"
                 type="text"
-                pholder=" e-mail address"
+                pholder=" E-mail"
+                className=""
               />
               <TextField
                 label="Subject"
                 name="subject"
-                pholder=" mail subject"
+                pholder=" Subject"
                 type="text"
+                className="t "
               />
               <TextField
                 label="Message"
@@ -93,14 +98,15 @@ const MailForm = (props) => {
                 pholder=" ..."
                 type="text"
                 ismessage="true"
+                className="t "
               />
             </div>
-              <button type="submit" className="submit-btn">
-                Send
-              </button>   
+            <button type="submit" className="submit-btn">
+              Send Message
+            </button>
           </Form>
           {successState && <Success message="E-mail sent!" />}
-          <Error message="Something went wrong" />
+          {errorState && <Error message="Something went wrong" />}
         </div>
       )}
     </Formik>

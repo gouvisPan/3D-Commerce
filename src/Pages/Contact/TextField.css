@@ -1,28 +1,21 @@
 .error-m {
-  color: #b81616;
+  color: white;
   letter-spacing: 0.5px;
-  font-weight: 300;
+  font-weight: 500;
   font-size: 1rem;
   position: absolute;
-  left: 8rem;
+  left: 4px;
   bottom: -1.8rem;
 }
 
-input {
-  height: 100%;
+textarea {
+  background-color: white;
   padding: 0.2rem;
-  background-color: var(--color-grey-light);
-  border-radius: 0.5rem;
   font-size: 1.2rem;
-  width: 15rem;
 }
 
-textarea {
-  background-color: var(--color-grey-light);
-  padding: 0.2rem;
-  width: 15rem;
-  border-radius: 0.5rem;
-  font-size: 1.2rem;
+.t {
+  grid-column: 1 / -1;
 }
 
 .text-field-content {
@@ -32,28 +25,11 @@ textarea {
   position: relative;
   gap: 2rem;
 }
-.text-field-content label {
-  font-size: 1.2rem;
-  width: 10rem;
-  text-align: start;
-  justify-self: flex-end;
-}
 .text-field-content input {
-  flex: 0.4 1 0;
-}
-
-.field {
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  justify-content: space-between;
-}
-
-.message {
-  border-radius: 0.5rem;
-  height: 7rem;
-}
-.field {
-  width: 20rem;
-  height: 2.4rem;
+  height: 100%;
+  width: 100%;
+  padding: 0.2rem;
+  background-color: white;
+  border: 0px;
+  font-size: 1.2rem;
 }

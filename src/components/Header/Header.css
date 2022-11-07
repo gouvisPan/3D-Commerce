@@ -1,15 +1,15 @@
 .fixed-nav {
   width: max-content;
-  padding: 1rem 1rem 0.2rem 0;
+  padding: 1rem 1rem 0.3rem 2rem;
 
   position: fixed;
   top: -0.5rem;
   right: 0;
 
-  z-index: 2;
+  z-index: 5;
 
   border-radius: 0 0 0 15px;
-  box-shadow: -3px 3px 6px 3px rgba(0, 0, 0, 0.18);
+  box-shadow: -3px 3px 6px 3px rgba(50, 50, 50, 0.1);
 
   background-color: rgba(255, 255, 255, 0.7);
   gap: 2.5rem;
@@ -38,7 +38,10 @@
   color: var(--color-primary-light);
 }
 .fixed-nav .active {
-  color: var(--color-grey-black);
+  color: var(--color-grey-dark);
+}
+.active-cart {
+  display: none;
 }
 
 .mobile-nav {
@@ -108,8 +111,13 @@
 
   margin-top: 1rem;
   margin-left: 0.8rem;
-  width: 12rem;
-  z-index: 3;
+  width: 14rem;
+  z-index: 1;
+  filter: brightness(0) invert(0);
+}
+
+.w {
+  filter: brightness(0) invert(1);
 }
 
 @keyframes slidein-low {
