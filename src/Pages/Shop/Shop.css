@@ -6,16 +6,17 @@
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  border-radius: 0px 0px 20px 20px;
+  border-radius: 0px 20px  0px 0px ;
   height: 3rem;
   width: 12rem;
   padding-bottom: 0.2rem;
   margin-top: -0.4rem;
-  font-weight: 900;
+  font-weight: 1000;
   color: white;
   position: fixed;
-  top: 0;
-  left: 20rem;
+
+  bottom: 0;
+  left: 0;
   background-color: var(--color-primary);
 
   -webkit-transition: all 0.12s ease-in;
@@ -25,7 +26,7 @@
 .expanded {
   height: 3.8rem;
   width: 32rem;
-  border-radius: 0px 0px 20px 20px;
+  border-radius: 0px 20px  0px 0px;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
 }
@@ -96,6 +97,11 @@
 }
 
 @media (max-width: 600px) {
+  .shop-container{
+    margin-top: 0rem;
+    width: auto;
+  }
+
   .menu {
     display: flex;
     flex-direction: column;

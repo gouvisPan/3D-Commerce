@@ -134,15 +134,13 @@
   .logo {
     display: none;
   }
-
   .outer-basket {
-    padding: 0;
+    padding: 1rem;
     font-size: 2rem;
     border-radius: 50px;
     background-color: var(--color-primary-dark);
     color: white;
   }
-
   .positioning-class {
     padding: 0 0 0 0rem;
   }
