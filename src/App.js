@@ -1,17 +1,19 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "./Pages/Home/Home";
-import About from "./Pages/About/About";
-import Custom from "./Pages/Custom/Custom";
-import { React } from "react";
+import * as React from "react";
+import { Suspense } from "react";
 import ErrorPage from "./Pages/ErrorPage";
 import Header from "./components/Header/Header";
-import Contact from "./Pages/Contact/Contact";
-import Shop from "./Pages/Shop/Shop";
-import Checkout from "./Pages/Checkout/Checkout";
-
-import Cart from "./Pages/Cart/Cart";
 import useCommerce from "./customHooks/useCommerce";
+import GridLoader from "react-spinners/GridLoader";
+
+const Shop = React.lazy(() => import("./Pages/Shop/Shop"));
+const Custom = React.lazy(() => import("./Pages/Custom/Custom"));
+const About = React.lazy(() => import("./Pages/About/About"));
+const Contact = React.lazy(() => import("./Pages/Contact/Contact"));
+const Checkout = React.lazy(() => import("./Pages/Checkout/Checkout"));
+const Cart = React.lazy(() => import("./Pages/Cart/Cart"));
 
 function App() {
   const {
@@ -19,32 +21,41 @@ function App() {
     removeFromCartHandler: removeFromCart,
     updateCartQntyHandler: updateCartQnty,
     handleCheckout,
+    emptyCartHandler,
   } = useCommerce();
 
   return (
     <Router>
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/shop" element={<Shop addToCart={addToCart} />}></Route>
-        <Route path="/custom" element={<Custom />}></Route>
-        <Route path="/about" element={<About />}></Route>
-        <Route path="/contact" element={<Contact />}></Route>
-        <Route
-          path="/cart"
-          element={
-            <Cart
-              removeFromCart={removeFromCart}
-              updateCartQnty={updateCartQnty}
-            />
-          }
-        ></Route>
-        <Route
-          path="/checkout"
-          element={<Checkout handleCheckout={handleCheckout} />}
-        ></Route>
-        <Route path="*" element={<ErrorPage />}></Route>
-      </Routes>
+      <Suspense
+        fallback={
+          <div className="centered">
+            <GridLoader />
+          </div>
+        }
+      >
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/shop" element={<Shop addToCart={addToCart} />}></Route>
+          <Route path="/custom" element={<Custom />}></Route>
+          <Route path="/about" element={<About />}></Route>
+          <Route path="/contact" element={<Contact />}></Route>
+          <Route
+            path="/cart"
+            element={
+              <Cart
+                removeFromCart={removeFromCart}
+                updateCartQnty={updateCartQnty}
+              />
+            }
+          ></Route>
+          <Route
+            path="/checkout"
+            element={<Checkout handleCheckout={handleCheckout} />}
+          ></Route>
+          <Route path="*" element={<ErrorPage />}></Route>
+        </Routes>
+      </Suspense>
     </Router>
   );
 }

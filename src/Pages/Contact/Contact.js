@@ -22,11 +22,11 @@ const Contact = () => {
             <BsFillTelephoneFill className="contact-icon" />
           </a>
           <span>Leave us a message.</span>
-          <a href="https://api.whatsapp.com/send?phone=23100000">
+          <a target="blank" href="https://api.whatsapp.com/send?phone=23100000">
             <RiWhatsappFill className="contact-icon" />
           </a>
           <span>Complete the email form.</span>
-          <a href="tel:5554280940">
+          <a>
             <MdEmail className="contact-icon" />
           </a>
         </div>

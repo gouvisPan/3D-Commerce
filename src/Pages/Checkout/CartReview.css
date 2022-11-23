@@ -82,3 +82,12 @@ li span {
 .last-item {
   border-bottom: 0px;
 }
+
+@media (max-width: 600px) {
+  .review-container ul {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+}

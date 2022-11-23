@@ -90,7 +90,7 @@ const AddressForm = ({ checkoutToken, next }) => {
   }, [shippingSubdivision]);
 
   return (
-    <div>
+    <div className="adress-form-container">
       <Typography variant="h6" gutterBottom>
         Shipping Address
       </Typography>

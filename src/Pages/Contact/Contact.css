@@ -81,66 +81,15 @@
 
 @media (max-width: 600px) {
   .contact-container {
-    margin-top: 0;
-    width: 100vw;
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  .contact-grid {
-    margin: auto;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    justify-items: center;
-    row-gap: 2rem;
-    grid-template-columns: 1fr 1fr;
-    width: 70vw;
-  }
-
-  .get-in-touch-container h1 {
-    font-size: 40px;
-    margin-bottom: 4rem;
-    margin: 1rem 1rem 0 1rem;
-  }
-  .contact-grid span {
-    margin-left: -1.5rem;
-    justify-self: start;
-
-    font-size: 20px;
-    font-weight: 600;
-    align-self: center;
-  }
-
-  .contact-icon {
-    font-size: 42px;
-  }
-
-  .mail-form-container {
-    width: 100vw;
-    height: 70vh;
-
-    border-radius: 0px;
-    padding: 0rem;
-    box-shadow: -2px 2px 5px 2px rgba(0, 0, 0, 0.4);
-    background-color: var(--color-primary);
-  }
-
-  .mail-form-container h3 {
-    margin-top: 1.4rem;
-    font-size: 28px;
-    letter-spacing: 1.5px;
-    align-self: center;
-  }
-
-  .mail-form {
-    height: 32vh;
-    padding: 0.6rem;
-    margin: 0 3rem 5rem 3rem;
-    border-radius: 5px;
-    background-color: aliceblue;
-
+    margin: 0;
+    margin-bottom: 0;
     display: flex;
-    flex-direction: column;
-    gap: 0rem;
+    flex-direction: row;
+    justify-content: space-between;
+    color: var(--color-grey-black);
+  }
+
+  .get-in-touch-container {
+    display: none;
   }
 }

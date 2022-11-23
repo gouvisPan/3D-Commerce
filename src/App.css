@@ -28,6 +28,13 @@
   color: #61dafb;
 }
 
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

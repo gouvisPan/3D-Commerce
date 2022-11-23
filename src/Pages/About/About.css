@@ -20,7 +20,7 @@
 }
 
 .card-container p {
-  margin: 0.5rem;
+  margin: 2rem;
 }
 .card-container {
   width: 100%;
@@ -43,7 +43,7 @@
 }
 
 .map-container {
-  width: 110%;
+  width: 150%;
   height: 45vh;
   border-radius: 10rem;
 }

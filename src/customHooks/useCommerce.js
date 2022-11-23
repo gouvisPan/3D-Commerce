@@ -69,6 +69,7 @@ const useCommerce = () => {
     removeFromCartHandler,
     updateCartQntyHandler,
     handleCheckout,
+    emptyCartHandler,
   };
 };
 

@@ -58,3 +58,14 @@
   row-gap: 2.5rem;
   column-gap: 2rem;
 }
+
+@media (max-width: 600px) {
+  .form-container {
+    width: auto;
+    height: 70vh;
+  }
+
+  .form-content {
+    padding: 0 2rem;
+  }
+}
