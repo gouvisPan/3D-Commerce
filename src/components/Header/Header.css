@@ -135,10 +135,31 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1100px) {
   .logo {
     display: none;
   }
+  .outer-basket {
+    padding: 1.5rem;
+    font-size: 2.5rem;
+    border-radius: 50px;
+    background-color: var(--color-primary-dark);
+  }
+  .wrapper-bottom {
+    position: fixed;
+    bottom: 4rem;
+    right: 2rem;
+  }
+
+  .badge {
+    margin-left: -1.4rem;
+    margin-top: -0.2rem;
+    border-radius: 20px;
+    padding: 0.4rem 0.6rem;
+  }
+}
+
+@media (max-width: 500px) {
   .outer-basket {
     padding: 1rem;
     font-size: 2rem;

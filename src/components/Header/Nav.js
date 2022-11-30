@@ -66,7 +66,7 @@ const Nav = () => {
 
   const mobileNav = <nav className="mobile-nav">{navJSX}</nav>;
 
-  const navBar = width > 600 ? desktopNav : mobileNav;
+  const navBar = width > 1100 ? desktopNav : mobileNav;
 
   return navBar;
 };

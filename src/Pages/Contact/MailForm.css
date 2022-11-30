@@ -59,7 +59,7 @@
   column-gap: 2rem;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1100px) {
   .form-container {
     width: auto;
     height: 70vh;

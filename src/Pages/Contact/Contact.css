@@ -79,7 +79,7 @@
   margin: 4rem auto;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1100px) {
   .contact-container {
     margin: 0;
     margin-bottom: 0;

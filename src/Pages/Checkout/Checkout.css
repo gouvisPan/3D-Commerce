@@ -52,7 +52,7 @@
   filter: brightness(90%);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1100px) {
   .checkout-page-container {
     margin: 1rem;
   }
